@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: c272b15cbd8f04a46bbf11f4a6e14b8d
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - singleDoorLeftRoom: {instanceID: 0}
+  - singleDoorRightRoom: {instanceID: 0}
+  - singleDoorTopRoom: {instanceID: 0}
+  - singleDoorBottomRoom: {instanceID: 0}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
