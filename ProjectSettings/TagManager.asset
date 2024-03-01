@@ -6,6 +6,9 @@ TagManager:
   tags:
   - SpawnPoint
   - Rooms
+  - CameraPosition
+  - GameCursor
+  - Bullet
   layers:
   - Default
   - TransparentFX
@@ -15,14 +18,14 @@ TagManager:
   - UI
   - NotGround
   - IsGround
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
+  - Walls
+  - Ground
+  - MiniMap
+  - HideOnMap
+  - PHitbox
+  - PHurtbox
+  - EHitbox
+  - EHurtbox
   - 
   - 
   - 
