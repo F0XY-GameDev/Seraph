@@ -4,28 +4,87 @@ using UnityEngine;
 
 public class RoomTemplates : MonoBehaviour
 {
-    public GameObject[] bottomRooms;
-    public GameObject[] topRooms;
-    public GameObject[] leftRooms;
-    public GameObject[] rightRooms;
+    [Header("Room Prefab Arrays"), Tooltip("Arrays of rooms that can be spawned at runtime")]
+    public GameObject[] BRooms;
+    public GameObject[] TRooms;
+    public GameObject[] LRooms;
+    public GameObject[] RRooms;
+    public GameObject[] BTRooms;
+    public GameObject[] BLRooms;
+    public GameObject[] BRRooms;
+    public GameObject[] TLRooms;
+    public GameObject[] TRRooms;
+    public GameObject[] LRRooms;
+    public GameObject[] BTLRooms;
+    public GameObject[] BTRRooms;
+    public GameObject[] BLRRooms;
+    public GameObject[] TLRRooms;
+    public GameObject[] BTLRRooms;
 
+    [Header("Singular Room Prefabs")]
+    public GameObject BRoom;
+    public GameObject TRoom;
+    public GameObject LRoom;
+    public GameObject RRoom;
+    public GameObject BTRoom;
+    public GameObject BLRoom;
+    public GameObject BRRoom;
+    public GameObject TLRoom;
+    public GameObject TRRoom;
+    public GameObject LRRoom;
+    public GameObject BTLRoom;
+    public GameObject BTRRoom;
+    public GameObject BLRRoom;
+    public GameObject TLRRoom;
+    public GameObject BTLRRoom;
+
+
+    [Header("Encounter Prefabs")]
+    public List<GameObject> bottomEncounters = new List<GameObject>();
+    public List<GameObject> topEncounters = new List<GameObject>();
+    public List<GameObject> leftEncounters = new List<GameObject>();
+    public List<GameObject> rightEncounters = new List<GameObject>();
+    public List<GameObject> bottomTopEncounters = new List<GameObject>();
+    public List<GameObject> bottomLeftEncounters = new List<GameObject>();
+    public List<GameObject> bottomRightEncounters = new List<GameObject>();
+    public List<GameObject> topLeftEncounters = new List<GameObject>();
+    public List<GameObject> topRightEncounters = new List<GameObject>();
+    public List<GameObject> leftRightEncounters = new List<GameObject>();
+    public List<GameObject> bottomTopLeftEncounters = new List<GameObject>();
+    public List<GameObject> bottomTopRightEncounters = new List<GameObject>();
+    public List<GameObject> bottomLeftRightEncounters = new List<GameObject>();
+    public List<GameObject> topLeftRightEncounters = new List<GameObject>();
+    public List<GameObject> bottomTopLeftRightEncounters = new List<GameObject>();
+
+
+
+
+
+    [Header("All Rooms Spawned"), Tooltip("List used during runtime to store all rooms spawned on the current floor")]
     public List<GameObject> rooms;
 
+    [Header("Edge Case Rooms"), Tooltip("Rooms that spawn under special circumstances")]
     public GameObject closedRoom;
     public GameObject singleDoorLeftRoom;
     public GameObject singleDoorRightRoom;
     public GameObject singleDoorTopRoom;
     public GameObject singleDoorBottomRoom;
 
+    [Header("Boss Encounters"), Tooltip("Possible Boss Encounters for the current floor")]
+    public List<GameObject> bosses = new List<GameObject>();
+
+    [Header("Config")]
     public int spawnCount;
     public int spawnStopCount;
     public int globalSeed;
-
+    public System.Random globalRandInt;
     public float waitTime;
-    private bool spawnedBoss;
+    public bool spawnedBoss;
+
+    [Header("Boss Icon Prefab")]
     public GameObject boss;
 
-    public System.Random globalRandInt;
+    
 
     private void Awake()
     {
@@ -33,6 +92,11 @@ public class RoomTemplates : MonoBehaviour
         globalSeed = Random.Range(0, 99999);
         //globalSeed = 57993;
         globalRandInt = new System.Random(globalSeed);
+        waitTime = 5f;
+    }
+    public void IncreaseSpawnCount(int value)
+    {
+        spawnCount += value;
     }
 
     private void Update()
@@ -45,6 +109,7 @@ public class RoomTemplates : MonoBehaviour
                 {
                     Instantiate(boss, rooms[i].transform.position, Quaternion.identity);
                     spawnedBoss = true;
+                    rooms[i].GetComponent<Room>().isBossRoom = true;
                 }
             }
         } else

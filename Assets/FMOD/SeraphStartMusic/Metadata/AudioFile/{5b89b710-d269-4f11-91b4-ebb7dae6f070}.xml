@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{5b89b710-d269-4f11-91b4-ebb7dae6f070}">
+		<property name="assetPath">
+			<value>Town/PianoBasicOctaveUp.wav</value>
+		</property>
+		<property name="isStreaming">
+			<value>true</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>26.053083900226756</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{98dd4fdf-b7d9-4058-97ef-381944850523}</destination>
+		</relationship>
+	</object>
+</objects>

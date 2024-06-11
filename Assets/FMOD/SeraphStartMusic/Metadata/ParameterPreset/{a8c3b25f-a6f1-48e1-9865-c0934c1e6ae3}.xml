@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="ParameterPreset" id="{a8c3b25f-a6f1-48e1-9865-c0934c1e6ae3}">
+		<property name="name">
+			<value>PlayHarmony</value>
+		</property>
+		<relationship name="folder">
+			<destination>{ff7be9d7-66e7-44a8-a56a-42d2c62693b1}</destination>
+		</relationship>
+		<relationship name="parameter">
+			<destination>{265d9e36-2aa4-439f-9d2d-33ff22ac012a}</destination>
+		</relationship>
+	</object>
+	<object class="GameParameter" id="{265d9e36-2aa4-439f-9d2d-33ff22ac012a}">
+		<property name="parameterType">
+			<value>2</value>
+		</property>
+		<property name="maximum">
+			<value>2</value>
+		</property>
+		<property name="enumerationLabels">
+			<value>False</value>
+			<value>True</value>
+		</property>
+		<property name="initialValue">
+			<value>0</value>
+		</property>
+	</object>
+</objects>

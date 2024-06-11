@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{7ba0c933-c668-47ca-a27a-4c671a99b874}">
+		<property name="assetPath">
+			<value>Town/PianoHarmony.wav</value>
+		</property>
+		<property name="isStreaming">
+			<value>true</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>15.68920634920635</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{98dd4fdf-b7d9-4058-97ef-381944850523}</destination>
+		</relationship>
+	</object>
+</objects>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{a26be3d1-a2c8-4a68-bf20-b293bdfa08e0}">
+		<property name="assetPath">
+			<value>Town/Guitar.wav</value>
+		</property>
+		<property name="isStreaming">
+			<value>true</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>15.543673469387755</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{98dd4fdf-b7d9-4058-97ef-381944850523}</destination>
+		</relationship>
+	</object>
+</objects>

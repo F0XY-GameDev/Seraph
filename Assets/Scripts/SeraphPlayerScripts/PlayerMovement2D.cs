@@ -14,6 +14,7 @@ public class PlayerMovement2D : MonoBehaviour
     public float dashSpeedMult;
     public float dashCooldown = 0.5f;
     bool canDash = true;
+    bool canMove = false;
     bool lockedDirection = false;
     public int dashTime;
     public int m_dashTime;
@@ -24,6 +25,7 @@ public class PlayerMovement2D : MonoBehaviour
     {
         input = new CustomInput();
         moveSpeed = FindAnyObjectByType<Player>().moveSpeed;
+        canMove = true;
     }
     private void OnEnable()
     {
@@ -44,12 +46,25 @@ public class PlayerMovement2D : MonoBehaviour
     }
     private void FixedUpdate()
     {
+        if (!canMove)
+        {
+            return;
+        }
         if (dashTime > 0)
         {
             dashTime--;
         }
         //rb.MovePosition(rb.position + (movement * moveSpeed * Time.fixedDeltaTime) * dashSpeed);
         rb.velocity = movement * moveSpeed * dashSpeed;
+    }
+    public void LockMovement()
+    {
+        canMove = false;
+        rb.velocity = Vector2.zero;
+    }
+    public void UnlockMovement()
+    {
+        canMove = true;
     }
     private void OnMovementPerformed(InputAction.CallbackContext value)
     {

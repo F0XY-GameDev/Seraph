@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="ParameterPreset" id="{a39daf62-911a-4f47-ad4d-2b6a0db41c79}">
+		<property name="name">
+			<value>EndSound</value>
+		</property>
+		<relationship name="folder">
+			<destination>{ff7be9d7-66e7-44a8-a56a-42d2c62693b1}</destination>
+		</relationship>
+		<relationship name="parameter">
+			<destination>{677fd148-64a2-45b7-ba6f-df0cb5d7cf94}</destination>
+		</relationship>
+	</object>
+	<object class="GameParameter" id="{677fd148-64a2-45b7-ba6f-df0cb5d7cf94}">
+		<property name="parameterType">
+			<value>2</value>
+		</property>
+		<property name="maximum">
+			<value>2</value>
+		</property>
+		<property name="enumerationLabels">
+			<value>False</value>
+			<value>True</value>
+		</property>
+		<property name="initialValue">
+			<value>0</value>
+		</property>
+	</object>
+</objects>

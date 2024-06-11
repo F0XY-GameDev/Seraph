@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 3028888126037655438}
   m_Layer: 0
   m_Name: SpawnCollider
-  m_TagString: SpawnPoint
+  m_TagString: SpawnCollider
   m_Icon: {fileID: 6519382022992737161, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -91,7 +91,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   openingDirection: 0
+  needBottomDoor: 0
+  needTopDoor: 0
+  needRightDoor: 0
+  needLeftDoor: 0
+  needBottomWall: 0
+  needTopWall: 0
+  needRightWall: 0
+  needLeftWall: 0
   spawned: 1
   waitTime: 4
   hasEncounter: 0
   encounterSeed: 0
+  priority: 0
+  checkedForWalls: 0

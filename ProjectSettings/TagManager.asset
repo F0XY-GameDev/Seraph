@@ -9,6 +9,10 @@ TagManager:
   - CameraPosition
   - GameCursor
   - Bullet
+  - Coin
+  - Encounter
+  - Wall
+  - CameraMover
   layers:
   - Default
   - TransparentFX
@@ -26,7 +30,7 @@ TagManager:
   - PHurtbox
   - EHitbox
   - EHurtbox
-  - 
+  - Loot
   - 
   - 
   - 
