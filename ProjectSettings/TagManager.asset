@@ -13,6 +13,7 @@ TagManager:
   - Encounter
   - Wall
   - CameraMover
+  - SpawnCollider
   layers:
   - Default
   - TransparentFX

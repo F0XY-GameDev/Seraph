@@ -393,7 +393,7 @@ Camera:
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 19455
+    m_Bits: 84991
   m_RenderingPath: -1
   m_TargetTexture: {fileID: 0}
   m_TargetDisplay: 0
@@ -1176,6 +1176,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 142893425558566921, guid: 2ea6b260f510a834c9c19ee32751bb16, type: 3}
+      propertyPath: m_TagString
+      value: SpawnCollider
+      objectReference: {fileID: 0}
     - target: {fileID: 5474486208137262987, guid: 2ea6b260f510a834c9c19ee32751bb16, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -1366,38 +1370,38 @@ MonoBehaviour:
   - {fileID: 5261375771749936855, guid: 4e76e38ea379fff49b0559872d76b0dd, type: 3}
   - {fileID: 5261375771749936855, guid: 4e76e38ea379fff49b0559872d76b0dd, type: 3}
   bottomTopEncounters:
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 749232222163854580, guid: b19da8d6ea348de46845a21fe69928bd, type: 3}
+  - {fileID: 5261375771749936855, guid: 4e76e38ea379fff49b0559872d76b0dd, type: 3}
   bottomLeftEncounters:
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 749232222163854580, guid: b19da8d6ea348de46845a21fe69928bd, type: 3}
+  - {fileID: 5261375771749936855, guid: 4e76e38ea379fff49b0559872d76b0dd, type: 3}
   bottomRightEncounters:
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 749232222163854580, guid: b19da8d6ea348de46845a21fe69928bd, type: 3}
+  - {fileID: 5261375771749936855, guid: 4e76e38ea379fff49b0559872d76b0dd, type: 3}
   topLeftEncounters:
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 749232222163854580, guid: b19da8d6ea348de46845a21fe69928bd, type: 3}
+  - {fileID: 5261375771749936855, guid: 4e76e38ea379fff49b0559872d76b0dd, type: 3}
   topRightEncounters:
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 749232222163854580, guid: b19da8d6ea348de46845a21fe69928bd, type: 3}
+  - {fileID: 5261375771749936855, guid: 4e76e38ea379fff49b0559872d76b0dd, type: 3}
   leftRightEncounters:
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 749232222163854580, guid: b19da8d6ea348de46845a21fe69928bd, type: 3}
+  - {fileID: 5261375771749936855, guid: 4e76e38ea379fff49b0559872d76b0dd, type: 3}
   bottomTopLeftEncounters:
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 749232222163854580, guid: b19da8d6ea348de46845a21fe69928bd, type: 3}
+  - {fileID: 5261375771749936855, guid: 4e76e38ea379fff49b0559872d76b0dd, type: 3}
   bottomTopRightEncounters:
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 749232222163854580, guid: b19da8d6ea348de46845a21fe69928bd, type: 3}
+  - {fileID: 5261375771749936855, guid: 4e76e38ea379fff49b0559872d76b0dd, type: 3}
   bottomLeftRightEncounters:
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 749232222163854580, guid: b19da8d6ea348de46845a21fe69928bd, type: 3}
+  - {fileID: 5261375771749936855, guid: 4e76e38ea379fff49b0559872d76b0dd, type: 3}
   topLeftRightEncounters:
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 749232222163854580, guid: b19da8d6ea348de46845a21fe69928bd, type: 3}
+  - {fileID: 5261375771749936855, guid: 4e76e38ea379fff49b0559872d76b0dd, type: 3}
   bottomTopLeftRightEncounters:
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 749232222163854580, guid: b19da8d6ea348de46845a21fe69928bd, type: 3}
+  - {fileID: 5261375771749936855, guid: 4e76e38ea379fff49b0559872d76b0dd, type: 3}
   rooms: []
   closedRoom: {fileID: 6442764610965306572, guid: 9e35daa803d892049b85c2ded52bf25e, type: 3}
   singleDoorLeftRoom: {fileID: 804270747724908801, guid: 6693bf9ec670f7e4fa3945eb3250ab0a, type: 3}
@@ -1479,6 +1483,10 @@ PrefabInstance:
     - target: {fileID: 4831522230388898894, guid: 169593ff00f1a934a826f354aefbc7a8, type: 3}
       propertyPath: m_ExcludeLayers.m_Bits
       value: 12288
+      objectReference: {fileID: 0}
+    - target: {fileID: 7555649262041659103, guid: 169593ff00f1a934a826f354aefbc7a8, type: 3}
+      propertyPath: stats.Array.data[2]
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 8640052029123436697, guid: 169593ff00f1a934a826f354aefbc7a8, type: 3}
       propertyPath: m_Name

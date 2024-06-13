@@ -140,7 +140,7 @@ public class EWalker : MonoBehaviour
             {
                 //Create a coin with a value and lifespan, then add the coin and a circle collider to a new gameobject and instantiate
                 GameObject go = Instantiate(coinPrefab, transform.position, Quaternion.identity);
-                go.GetComponent<Coin>().lifeSpan = 500;
+                go.GetComponent<Coin>().lifeSpan = (int)Random.Range(400,600);
                 go.GetComponent<Coin>().value = coinValue;
             }
         }

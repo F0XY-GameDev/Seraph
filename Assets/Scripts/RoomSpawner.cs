@@ -104,7 +104,6 @@ public class RoomSpawner : MonoBehaviour
     private IEnumerator Spawn()
     {
         var col = Physics2D.OverlapCircle(this.transform.position, 2f);
-        Debug.Log(col);
         if (col != null)
         {
             if (col.CompareTag("SpawnPoint"))
@@ -113,14 +112,12 @@ public class RoomSpawner : MonoBehaviour
             }
         }
         yield return new WaitUntil(() => checkedForWalls == true);
-        //yield return new WaitForSeconds(0.75f);
         Room room;
         if (!spawned)
         {
             //When we reach a certain number of rooms spawned force lowest number door room spawns to stop spawning new rooms
             if (templates.spawnCount >= templates.spawnStopCount)
             {
-                //MOVE INTO SECOND PART OF SCRIPT WHEN IT'S WORKING AS INTENDED
                 switch (openingDirection)
                 {
                     case 1:
@@ -308,9 +305,6 @@ public class RoomSpawner : MonoBehaviour
                     int rand1 = templates.globalRandInt.Next(0, templates.BRooms.Length - 1);
                     room = Instantiate(templates.BRooms[rand1], transform.position, Quaternion.identity).GetComponent<Room>();
                     room.SetOpeningDirection(openingDirection);
-                    //int encRand1 = templates.globalRandInt.Next(0, templates.bottomEncounters.Count - 1);
-                    //StartCoroutine(SpawnEncounterAfterBossSpawned(room1.transform, templates.bottomEncounters[encRand1]));
-
                     spawned = true;
                     templates.IncreaseSpawnCount(1);
                     break;
@@ -381,10 +375,6 @@ public class RoomSpawner : MonoBehaviour
                     int rand2 = templates.globalRandInt.Next(0, templates.TRooms.Length - 1);
                     room = Instantiate(templates.TRooms[rand2], transform.position, Quaternion.identity).GetComponent<Room>();
                     room.SetOpeningDirection(openingDirection);
-                                        
-                    //int encRand2 = templates.globalRandInt.Next(0, templates.topEncounters.Count - 1);
-                    //StartCoroutine(SpawnEncounterAfterBossSpawned(room2.transform, templates.topEncounters[encRand2]));
-
                     spawned = true;
                     templates.IncreaseSpawnCount(1);
                     break;
@@ -455,10 +445,6 @@ public class RoomSpawner : MonoBehaviour
                     int rand3 = templates.globalRandInt.Next(0, templates.LRooms.Length - 1);
                     room = Instantiate(templates.LRooms[rand3], transform.position, Quaternion.identity).GetComponent<Room>();
                     room.SetOpeningDirection(openingDirection);
-
-                    //int encRand3 = templates.globalRandInt.Next(0, templates.leftEncounters.Count - 1);
-                    //StartCoroutine(SpawnEncounterAfterBossSpawned(room3.transform, templates.leftEncounters[encRand3]));
-
                     spawned = true;
                     templates.IncreaseSpawnCount(1);
                     break;
@@ -529,10 +515,6 @@ public class RoomSpawner : MonoBehaviour
                     int rand4 = templates.globalRandInt.Next(0, templates.RRooms.Length - 1);
                     room = Instantiate(templates.RRooms[rand4], transform.position, Quaternion.identity).GetComponent<Room>();
                     room.SetOpeningDirection(openingDirection);
-
-                    //int encRand4 = templates.globalRandInt.Next(0, templates.rightEncounters.Count - 1);
-                    //StartCoroutine(SpawnEncounterAfterBossSpawned(room4.transform, templates.rightEncounters[encRand4]));
-                    
                     spawned = true;
                     templates.IncreaseSpawnCount(1);
                     break;
@@ -567,10 +549,6 @@ public class RoomSpawner : MonoBehaviour
                     int rand5 = templates.globalRandInt.Next(0, templates.BTRooms.Length - 1);
                     room = Instantiate(templates.BTRooms[rand5], transform.position, Quaternion.identity).GetComponent<Room>();
                     room.SetOpeningDirection(openingDirection);
-
-                    //int encRand5 = templates.globalRandInt.Next(0, templates.bottomTopEncounters.Count - 1);
-                    //StartCoroutine(SpawnEncounterAfterBossSpawned(room5.transform, templates.bottomTopEncounters[encRand5]));
-
                     spawned = true;
                     templates.IncreaseSpawnCount(1);
                     break;
@@ -605,10 +583,6 @@ public class RoomSpawner : MonoBehaviour
                     int rand6 = templates.globalRandInt.Next(0, templates.BLRooms.Length - 1);
                     room = Instantiate(templates.BLRooms[rand6], transform.position, Quaternion.identity).GetComponent<Room>();
                     room.SetOpeningDirection(openingDirection);
-
-                    //int encRand6 = templates.globalRandInt.Next(0, templates.bottomLeftEncounters.Count - 1);
-                    //StartCoroutine(SpawnEncounterAfterBossSpawned(room2.transform, templates.topEncounters[encRand2]));
-
                     spawned = true;
                     templates.IncreaseSpawnCount(1);
                     break;
@@ -643,10 +617,6 @@ public class RoomSpawner : MonoBehaviour
                     int rand7 = templates.globalRandInt.Next(0, templates.BRRooms.Length - 1);
                     room = Instantiate(templates.BRRooms[rand7], transform.position, Quaternion.identity).GetComponent<Room>();
                     room.SetOpeningDirection(openingDirection);
-
-                    //int encRand7 = templates.globalRandInt.Next(0, templates.bottomRightEncounters.Count - 1);
-                    //StartCoroutine(SpawnEncounterAfterBossSpawned(room3.transform, templates.leftEncounters[encRand3]));
-
                     spawned = true;
                     templates.IncreaseSpawnCount(1);
                     break;
@@ -681,10 +651,6 @@ public class RoomSpawner : MonoBehaviour
                     int rand8 = templates.globalRandInt.Next(0, templates.TLRooms.Length - 1);
                     room = Instantiate(templates.TLRooms[rand8], transform.position, Quaternion.identity).GetComponent<Room>();
                     room.SetOpeningDirection(openingDirection);
-
-                    //int encRand8 = templates.globalRandInt.Next(0, templates.topLeftEncounters.Count - 1);
-                    //StartCoroutine(SpawnEncounterAfterBossSpawned(room4.transform, templates.rightEncounters[encRand4]));
-
                     spawned = true;
                     templates.IncreaseSpawnCount(1);
                     break;
@@ -719,10 +685,6 @@ public class RoomSpawner : MonoBehaviour
                     int rand9 = templates.globalRandInt.Next(0, templates.TRRooms.Length - 1);
                     room = Instantiate(templates.TRRooms[rand9], transform.position, Quaternion.identity).GetComponent<Room>();
                     room.SetOpeningDirection(openingDirection);
-
-                    //int encRand9 = templates.globalRandInt.Next(0, templates.topRightEncounters.Count - 1);
-                    //StartCoroutine(SpawnEncounterAfterBossSpawned(room1.transform, templates.bottomEncounters[encRand1]));
-
                     spawned = true;
                     templates.IncreaseSpawnCount(1);
                     break;
@@ -757,10 +719,6 @@ public class RoomSpawner : MonoBehaviour
                     int rand10 = templates.globalRandInt.Next(0, templates.LRRooms.Length - 1);
                     room = Instantiate(templates.LRRooms[rand10], transform.position, Quaternion.identity).GetComponent<Room>();
                     room.SetOpeningDirection(openingDirection);
-
-                    //int encRand10 = templates.globalRandInt.Next(0, templates.leftRightEncounters.Count - 1);
-                    //StartCoroutine(SpawnEncounterAfterBossSpawned(room2.transform, templates.topEncounters[encRand2]));
-
                     spawned = true;
                     templates.IncreaseSpawnCount(1);
                     break;
@@ -777,10 +735,6 @@ public class RoomSpawner : MonoBehaviour
                     int rand11 = templates.globalRandInt.Next(0, templates.BTLRooms.Length - 1);
                     room = Instantiate(templates.BTLRooms[rand11], transform.position, Quaternion.identity).GetComponent<Room>();
                     room.SetOpeningDirection(openingDirection);
-
-                    //int encRand11 = templates.globalRandInt.Next(0, templates.bottomTopLeftEncounters.Count - 1);
-                    //StartCoroutine(SpawnEncounterAfterBossSpawned(room3.transform, templates.leftEncounters[encRand3]));
-
                     spawned = true;
                     templates.IncreaseSpawnCount(1);
                     break;
@@ -797,10 +751,6 @@ public class RoomSpawner : MonoBehaviour
                     int rand12 = templates.globalRandInt.Next(0, templates.BTRRooms.Length - 1);
                     room = Instantiate(templates.BTRRooms[rand12], transform.position, Quaternion.identity).GetComponent<Room>();
                     room.SetOpeningDirection(openingDirection);
-
-                    //int encRand12 = templates.globalRandInt.Next(0, templates.bottomTopLeftEncounters.Count - 1);
-                    //StartCoroutine(SpawnEncounterAfterBossSpawned(room4.transform, templates.rightEncounters[encRand4]));
-
                     spawned = true;
                     templates.IncreaseSpawnCount(1);
                     break;
@@ -817,10 +767,6 @@ public class RoomSpawner : MonoBehaviour
                     int rand13 = templates.globalRandInt.Next(0, templates.BLRRooms.Length - 1);
                     room = Instantiate(templates.BLRRooms[rand13], transform.position, Quaternion.identity).GetComponent<Room>();
                     room.SetOpeningDirection(openingDirection);
-
-                    //int encRand13 = templates.globalRandInt.Next(0, templates.bottomLeftRightEncounters.Count - 1);
-                    //StartCoroutine(SpawnEncounterAfterBossSpawned(room1.transform, templates.bottomEncounters[encRand1]));
-
                     spawned = true;
                     templates.IncreaseSpawnCount(1);
                     break;
@@ -837,20 +783,12 @@ public class RoomSpawner : MonoBehaviour
                     int rand14 = templates.globalRandInt.Next(0, templates.TLRRooms.Length - 1);
                     room = Instantiate(templates.TLRRooms[rand14], transform.position, Quaternion.identity).GetComponent<Room>();
                     room.SetOpeningDirection(openingDirection);
-
-                    //int encRand14 = templates.globalRandInt.Next(0, templates.topLeftRightEncounters.Count - 1);
-                    //StartCoroutine(SpawnEncounterAfterBossSpawned(room2.transform, templates.topEncounters[encRand2]));
-
                     spawned = true;
                     templates.IncreaseSpawnCount(1);
                     break;
                 case 15:
-                    //int rand15 = templates.globalRandInt.Next(0, templates.BTLRRooms.Length - 1);
                     room = Instantiate(templates.BTLRRoom, transform.position, Quaternion.identity).GetComponent<Room>();
                     room.SetOpeningDirection(openingDirection);
-                    //int encRand15 = templates.globalRandInt.Next(0, templates.bottomTopLeftRightEncounters.Count - 1);
-                    //StartCoroutine(SpawnEncounterAfterBossSpawned(room3.transform, templates.leftEncounters[encRand3]));
-
                     spawned = true;
                     templates.IncreaseSpawnCount(1);
                     break;
