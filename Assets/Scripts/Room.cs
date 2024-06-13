@@ -11,7 +11,7 @@ public class Room : MonoBehaviour
     public GameObject encounter;
     public GameObject stairPrefab;
     private RoomTemplates templates;
-    [SerializeField] private int openingDirection;
+    public int openingDirection;
 
     public void Awake()
     {

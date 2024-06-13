@@ -80,7 +80,6 @@ public class RoomTemplates : MonoBehaviour
     public System.Random globalRandInt;
     public float waitTime;
     public bool spawnedBoss;
-
     [Header("Boss Icon Prefab")]
     public GameObject boss;
 
@@ -89,8 +88,8 @@ public class RoomTemplates : MonoBehaviour
     private void Awake()
     {
         spawnCount = 0;
-        globalSeed = Random.Range(0, 99999);
-        //globalSeed = 57993;
+        //globalSeed = Random.Range(0, 99999);
+        globalSeed = 19929;
         globalRandInt = new System.Random(globalSeed);
         waitTime = 5f;
     }
@@ -103,6 +102,40 @@ public class RoomTemplates : MonoBehaviour
     {
         if(waitTime <= 0 && spawnedBoss == false)
         {
+            foreach(GameObject go in rooms)
+            {
+                //if there is a room under or over it, remove the room with lower openingDirection
+                List<Collider2D> colliderList = new List<Collider2D>();
+                List<Room> roomList = new List<Room>();
+                Collider2D[] colliderArray = Physics2D.OverlapCircleAll(go.transform.position, 2f);
+                foreach (Collider2D col in colliderArray) { if (col.CompareTag("SpawnCollider")) { colliderList.Add(col); } }
+                foreach (Collider2D col in colliderList) { roomList.Add(col.GetComponentInParent<Room>()); }
+                foreach (Room room in roomList)
+                {
+                    if (go.GetComponent<Room>().openingDirection > room.openingDirection)
+                    {
+                        Debug.Log("Destroying " + room);
+                        Destroy(room.gameObject);
+                    }
+                }
+                /*if (col.Length > 1)
+                {
+                    room1 = go.GetComponent<Room>();
+                    room2 = col[1].GetComponent<Room>();
+                    if (room1 != null && room2 != null)
+                    {
+                        if (room1.openingDirection >= room2.openingDirection)
+                        {
+                            Destroy(room2.gameObject);
+                            Debug.Log("Destroyed " + room2);
+                        }
+                    }
+                    else
+                    {
+                        Debug.Log("Room1 is " + room1 + " and Room2 is " + room2);
+                    }
+                }*/
+            }
             for (int i = 0; i < rooms.Count; i++)
             {
                 if (i == rooms.Count - 1)

@@ -147,6 +147,7 @@ public class RoomSpawner : MonoBehaviour
                     default:
                         break;
                 }
+                if (templates.waitTime <= 0.5f) { templates.waitTime += 0.5f; }
                 if (spawned) { yield break; }
             }
                         /*if at spawnpoint.position + 12 (in x direction) is GObj tagged CameraMover, also need opening in Right direction
@@ -252,7 +253,7 @@ public class RoomSpawner : MonoBehaviour
                     {
                         //spawn bottom/top door room
                         room = Instantiate(templates.BTRoom, transform.position, Quaternion.identity).GetComponent<Room>();
-                        room.SetOpeningDirection(openingDirection);
+                        room.SetOpeningDirection(5);
                         spawned = true;
                         templates.IncreaseSpawnCount(1);
                         break;
@@ -261,7 +262,7 @@ public class RoomSpawner : MonoBehaviour
                     {
                         //spawn bottom/left door room
                         room = Instantiate(templates.BLRoom, transform.position, Quaternion.identity).GetComponent<Room>();
-                        room.SetOpeningDirection(openingDirection);
+                        room.SetOpeningDirection(6);
                         spawned = true;
                         templates.IncreaseSpawnCount(1);
                         break;
@@ -270,7 +271,7 @@ public class RoomSpawner : MonoBehaviour
                     {
                         //spawn bottom/right door room
                         room = Instantiate(templates.BRRoom, transform.position, Quaternion.identity).GetComponent<Room>();
-                        room.SetOpeningDirection(openingDirection);
+                        room.SetOpeningDirection(7);
                         spawned = true;
                         templates.IncreaseSpawnCount(1);
                         break;
@@ -279,7 +280,7 @@ public class RoomSpawner : MonoBehaviour
                     {
                         //spawn bottom/top/left door room
                         room = Instantiate(templates.BTLRoom, transform.position, Quaternion.identity).GetComponent<Room>();
-                        room.SetOpeningDirection(openingDirection);
+                        room.SetOpeningDirection(11);
                         spawned = true;
                         templates.IncreaseSpawnCount(1);
                         break;
@@ -288,7 +289,7 @@ public class RoomSpawner : MonoBehaviour
                     {
                         //spawn bottom/top/right door room
                         room = Instantiate(templates.BTRRoom, transform.position, Quaternion.identity).GetComponent<Room>();
-                        room.SetOpeningDirection(openingDirection);
+                        room.SetOpeningDirection(12);
                         spawned = true;
                         templates.IncreaseSpawnCount(1);
                         break;
@@ -297,13 +298,39 @@ public class RoomSpawner : MonoBehaviour
                     {
                         //spawn bottom/left/right door room
                         room = Instantiate(templates.BLRRoom, transform.position, Quaternion.identity).GetComponent<Room>();
-                        room.SetOpeningDirection(openingDirection);
+                        room.SetOpeningDirection(13);
                         spawned = true;
                         templates.IncreaseSpawnCount(1);
                         break;
                     }
                     int rand1 = templates.globalRandInt.Next(0, templates.BRooms.Length - 1);
                     room = Instantiate(templates.BRooms[rand1], transform.position, Quaternion.identity).GetComponent<Room>();
+                    switch (rand1)
+                    {
+                        case 0:
+                            openingDirection = 1;
+                            break;
+                        case 1:
+                            openingDirection = 6;
+                            break;
+                        case 2:
+                            openingDirection = 7;
+                            break;
+                        case 3:
+                            openingDirection = 5;
+                            break;
+                        case 4:
+                            openingDirection = 13;
+                            break;
+                        case 5:
+                            openingDirection = 11;
+                            break;
+                        case 6:
+                            openingDirection = 12;
+                            break;
+                        default:
+                            break;
+                    }
                     room.SetOpeningDirection(openingDirection);
                     spawned = true;
                     templates.IncreaseSpawnCount(1);
@@ -322,7 +349,7 @@ public class RoomSpawner : MonoBehaviour
                     {
                         //spawn bottom/top door room
                         room = Instantiate(templates.BTRoom, transform.position, Quaternion.identity).GetComponent<Room>();
-                        room.SetOpeningDirection(openingDirection);
+                        room.SetOpeningDirection(5);
                         spawned = true;
                         templates.IncreaseSpawnCount(1);
                         break;
@@ -331,7 +358,7 @@ public class RoomSpawner : MonoBehaviour
                     {
                         //spawn top/left door room
                         room = Instantiate(templates.TLRoom, transform.position, Quaternion.identity).GetComponent<Room>();
-                        room.SetOpeningDirection(openingDirection);
+                        room.SetOpeningDirection(8);
                         spawned = true;
                         templates.IncreaseSpawnCount(1);
                         break;
@@ -340,7 +367,7 @@ public class RoomSpawner : MonoBehaviour
                     {
                         //spawn top/right door room
                         room = Instantiate(templates.TRRoom, transform.position, Quaternion.identity).GetComponent<Room>();
-                        room.SetOpeningDirection(openingDirection);
+                        room.SetOpeningDirection(9);
                         spawned = true;
                         templates.IncreaseSpawnCount(1);
                         break;
@@ -349,7 +376,7 @@ public class RoomSpawner : MonoBehaviour
                     {
                         //spawn bottom/top/left door room
                         room = Instantiate(templates.BTLRoom, transform.position, Quaternion.identity).GetComponent<Room>();
-                        room.SetOpeningDirection(openingDirection);
+                        room.SetOpeningDirection(11);
                         spawned = true;
                         templates.IncreaseSpawnCount(1);
                         break;
@@ -358,7 +385,7 @@ public class RoomSpawner : MonoBehaviour
                     {
                         //spawn bottom/top/right door room
                         room = Instantiate(templates.BTRRoom, transform.position, Quaternion.identity).GetComponent<Room>();
-                        room.SetOpeningDirection(openingDirection);
+                        room.SetOpeningDirection(12);
                         spawned = true;
                         templates.IncreaseSpawnCount(1);
                         break;
@@ -367,13 +394,39 @@ public class RoomSpawner : MonoBehaviour
                     {
                         //spawn top/left/right door room
                         room = Instantiate(templates.TLRRoom, transform.position, Quaternion.identity).GetComponent<Room>();
-                        room.SetOpeningDirection(openingDirection);
+                        room.SetOpeningDirection(14);
                         spawned = true;
                         templates.IncreaseSpawnCount(1);
                         break;
                     }
                     int rand2 = templates.globalRandInt.Next(0, templates.TRooms.Length - 1);
                     room = Instantiate(templates.TRooms[rand2], transform.position, Quaternion.identity).GetComponent<Room>();
+                    switch (rand2)
+                    {
+                        case 0:
+                            openingDirection = 5;
+                            break;
+                        case 1:
+                            openingDirection = 2;
+                            break;
+                        case 2:
+                            openingDirection = 8;
+                            break;
+                        case 3:
+                            openingDirection = 9;
+                            break;
+                        case 4:
+                            openingDirection = 11;
+                            break;
+                        case 5:
+                            openingDirection = 12;
+                            break;
+                        case 6:
+                            openingDirection = 14;
+                            break;
+                        default:
+                            break;
+                    }
                     room.SetOpeningDirection(openingDirection);
                     spawned = true;
                     templates.IncreaseSpawnCount(1);
@@ -391,8 +444,8 @@ public class RoomSpawner : MonoBehaviour
                     else if (!needBottomWall && needTopWall && needRightWall)
                     {
                         //spawn bottom/left door room
-                        room = Instantiate(templates.BTRoom, transform.position, Quaternion.identity).GetComponent<Room>();
-                        room.SetOpeningDirection(openingDirection);
+                        room = Instantiate(templates.BLRoom, transform.position, Quaternion.identity).GetComponent<Room>();
+                        room.SetOpeningDirection(6);
                         spawned = true;
                         templates.IncreaseSpawnCount(1);
                         break;
@@ -401,7 +454,7 @@ public class RoomSpawner : MonoBehaviour
                     {
                         //spawn top/left door room
                         room = Instantiate(templates.TLRoom, transform.position, Quaternion.identity).GetComponent<Room>();
-                        room.SetOpeningDirection(openingDirection);
+                        room.SetOpeningDirection(8);
                         spawned = true;
                         templates.IncreaseSpawnCount(1);
                         break;
@@ -410,7 +463,7 @@ public class RoomSpawner : MonoBehaviour
                     {
                         //spawn left/right door room
                         room = Instantiate(templates.LRRoom, transform.position, Quaternion.identity).GetComponent<Room>();
-                        room.SetOpeningDirection(openingDirection);
+                        room.SetOpeningDirection(10);
                         spawned = true;
                         templates.IncreaseSpawnCount(1);
                         break;
@@ -419,7 +472,7 @@ public class RoomSpawner : MonoBehaviour
                     {
                         //spawn bottom/top/left door room
                         room = Instantiate(templates.BTLRoom, transform.position, Quaternion.identity).GetComponent<Room>();
-                        room.SetOpeningDirection(openingDirection);
+                        room.SetOpeningDirection(11);
                         spawned = true;
                         templates.IncreaseSpawnCount(1);
                         break;
@@ -428,7 +481,7 @@ public class RoomSpawner : MonoBehaviour
                     {
                         //spawn bottom/left/right door room
                         room = Instantiate(templates.BLRRoom, transform.position, Quaternion.identity).GetComponent<Room>();
-                        room.SetOpeningDirection(openingDirection);
+                        room.SetOpeningDirection(13);
                         spawned = true;
                         templates.IncreaseSpawnCount(1);
                         break;
@@ -437,13 +490,39 @@ public class RoomSpawner : MonoBehaviour
                     {
                         //spawn top/left/right door room
                         room = Instantiate(templates.TLRRoom, transform.position, Quaternion.identity).GetComponent<Room>();
-                        room.SetOpeningDirection(openingDirection);
+                        room.SetOpeningDirection(14);
                         spawned = true;
                         templates.IncreaseSpawnCount(1);
                         break;
                     }
                     int rand3 = templates.globalRandInt.Next(0, templates.LRooms.Length - 1);
                     room = Instantiate(templates.LRooms[rand3], transform.position, Quaternion.identity).GetComponent<Room>();
+                    switch (rand3)
+                    {
+                        case 0:
+                            openingDirection = 3;
+                            break;
+                        case 1:
+                            openingDirection = 6;
+                            break;
+                        case 2:
+                            openingDirection = 10;
+                            break;
+                        case 3:
+                            openingDirection = 8;
+                            break;
+                        case 4:
+                            openingDirection = 13;
+                            break;
+                        case 5:
+                            openingDirection = 11;
+                            break;
+                        case 6:
+                            openingDirection = 14;
+                            break;
+                        default:
+                            break;
+                    }
                     room.SetOpeningDirection(openingDirection);
                     spawned = true;
                     templates.IncreaseSpawnCount(1);
@@ -462,7 +541,7 @@ public class RoomSpawner : MonoBehaviour
                     {
                         //spawn bottom/right door room
                         room = Instantiate(templates.BRRoom, transform.position, Quaternion.identity).GetComponent<Room>();
-                        room.SetOpeningDirection(openingDirection);
+                        room.SetOpeningDirection(7);
                         spawned = true;
                         templates.IncreaseSpawnCount(1);
                         break;
@@ -471,7 +550,7 @@ public class RoomSpawner : MonoBehaviour
                     {
                         //spawn top/right door room
                         room = Instantiate(templates.TRRoom, transform.position, Quaternion.identity).GetComponent<Room>();
-                        room.SetOpeningDirection(openingDirection);
+                        room.SetOpeningDirection(9);
                         spawned = true;
                         templates.IncreaseSpawnCount(1);
                         break;
@@ -480,7 +559,7 @@ public class RoomSpawner : MonoBehaviour
                     {
                         //spawn left/right door room
                         room = Instantiate(templates.LRRoom, transform.position, Quaternion.identity).GetComponent<Room>();
-                        room.SetOpeningDirection(openingDirection);
+                        room.SetOpeningDirection(10);
                         spawned = true;
                         templates.IncreaseSpawnCount(1);
                         break;
@@ -489,7 +568,7 @@ public class RoomSpawner : MonoBehaviour
                     {
                         //spawn bottom/top/right door room
                         room = Instantiate(templates.BTRRoom, transform.position, Quaternion.identity).GetComponent<Room>();
-                        room.SetOpeningDirection(openingDirection);
+                        room.SetOpeningDirection(12);
                         spawned = true;
                         templates.IncreaseSpawnCount(1);
                         break;
@@ -498,7 +577,7 @@ public class RoomSpawner : MonoBehaviour
                     {
                         //spawn bottom/left/right door room
                         room = Instantiate(templates.BLRRoom, transform.position, Quaternion.identity).GetComponent<Room>();
-                        room.SetOpeningDirection(openingDirection);
+                        room.SetOpeningDirection(13);
                         spawned = true;
                         templates.IncreaseSpawnCount(1);
                         break;
@@ -507,13 +586,39 @@ public class RoomSpawner : MonoBehaviour
                     {
                         //spawn top/left/right door room
                         room = Instantiate(templates.TLRRoom, transform.position, Quaternion.identity).GetComponent<Room>();
-                        room.SetOpeningDirection(openingDirection);
+                        room.SetOpeningDirection(14);
                         spawned = true;
                         templates.IncreaseSpawnCount(1);
                         break;
                     }
                     int rand4 = templates.globalRandInt.Next(0, templates.RRooms.Length - 1);
                     room = Instantiate(templates.RRooms[rand4], transform.position, Quaternion.identity).GetComponent<Room>();
+                    switch (rand4)
+                    {
+                        case 0:
+                            openingDirection = 4;
+                            break;
+                        case 1:
+                            openingDirection = 7;
+                            break;
+                        case 2:
+                            openingDirection = 10;
+                            break;
+                        case 3:
+                            openingDirection = 9;
+                            break;
+                        case 4:
+                            openingDirection = 13;
+                            break;
+                        case 5:
+                            openingDirection = 12;
+                            break;
+                        case 6:
+                            openingDirection = 14;
+                            break;
+                        default:
+                            break;
+                    }
                     room.SetOpeningDirection(openingDirection);
                     spawned = true;
                     templates.IncreaseSpawnCount(1);
@@ -532,7 +637,7 @@ public class RoomSpawner : MonoBehaviour
                     {
                         //spawn bottom/top/left room
                         room = Instantiate(templates.BTLRoom, transform.position, Quaternion.identity).GetComponent<Room>();
-                        room.SetOpeningDirection(openingDirection);
+                        room.SetOpeningDirection(11);
                         spawned = true;
                         templates.IncreaseSpawnCount(1);
                         break;
@@ -541,13 +646,30 @@ public class RoomSpawner : MonoBehaviour
                     {
                         //spawn bottom/top/right room
                         room = Instantiate(templates.BTRRoom, transform.position, Quaternion.identity).GetComponent<Room>();
-                        room.SetOpeningDirection(openingDirection);
+                        room.SetOpeningDirection(12);
                         spawned = true;
                         templates.IncreaseSpawnCount(1);
                         break;
                     }
                     int rand5 = templates.globalRandInt.Next(0, templates.BTRooms.Length - 1);
                     room = Instantiate(templates.BTRooms[rand5], transform.position, Quaternion.identity).GetComponent<Room>();
+                    switch (rand5)
+                    {
+                        case 0:
+                            openingDirection = 5;
+                            break;
+                        case 1:
+                            openingDirection = 11;
+                            break;
+                        case 2:
+                            openingDirection = 12;
+                            break;
+                        case 3:
+                            openingDirection = 15;
+                            break;
+                        default:
+                            break;
+                    }
                     room.SetOpeningDirection(openingDirection);
                     spawned = true;
                     templates.IncreaseSpawnCount(1);
@@ -566,7 +688,7 @@ public class RoomSpawner : MonoBehaviour
                     {
                         //spawn bottom/top/left room
                         room = Instantiate(templates.BTLRoom, transform.position, Quaternion.identity).GetComponent<Room>();
-                        room.SetOpeningDirection(openingDirection);
+                        room.SetOpeningDirection(11);
                         spawned = true;
                         templates.IncreaseSpawnCount(1);
                         break;
@@ -575,13 +697,30 @@ public class RoomSpawner : MonoBehaviour
                     {
                         //spawn bottom/left/right room
                         room = Instantiate(templates.BLRRoom, transform.position, Quaternion.identity).GetComponent<Room>();
-                        room.SetOpeningDirection(openingDirection);
+                        room.SetOpeningDirection(13);
                         spawned = true;
                         templates.IncreaseSpawnCount(1);
                         break;
                     }
                     int rand6 = templates.globalRandInt.Next(0, templates.BLRooms.Length - 1);
                     room = Instantiate(templates.BLRooms[rand6], transform.position, Quaternion.identity).GetComponent<Room>();
+                    switch (rand6)
+                    {
+                        case 0:
+                            openingDirection = 6;
+                            break;
+                        case 1:
+                            openingDirection = 13;
+                            break;
+                        case 2:
+                            openingDirection = 11;
+                            break;
+                        case 3:
+                            openingDirection = 15;
+                            break;
+                        default:
+                            break;
+                    }
                     room.SetOpeningDirection(openingDirection);
                     spawned = true;
                     templates.IncreaseSpawnCount(1);
@@ -600,7 +739,7 @@ public class RoomSpawner : MonoBehaviour
                     {
                         //spawn bottom/top/right room
                         room = Instantiate(templates.BTRRoom, transform.position, Quaternion.identity).GetComponent<Room>();
-                        room.SetOpeningDirection(openingDirection);
+                        room.SetOpeningDirection(12);
                         spawned = true;
                         templates.IncreaseSpawnCount(1);
                         break;
@@ -609,13 +748,30 @@ public class RoomSpawner : MonoBehaviour
                     {
                         //spawn bottom/left/right room
                         room = Instantiate(templates.BLRRoom, transform.position, Quaternion.identity).GetComponent<Room>();
-                        room.SetOpeningDirection(openingDirection);
+                        room.SetOpeningDirection(13);
                         spawned = true;
                         templates.IncreaseSpawnCount(1);
                         break;
                     }
                     int rand7 = templates.globalRandInt.Next(0, templates.BRRooms.Length - 1);
                     room = Instantiate(templates.BRRooms[rand7], transform.position, Quaternion.identity).GetComponent<Room>();
+                    switch (rand7)
+                    {
+                        case 0:
+                            openingDirection = 13;
+                            break;
+                        case 1:
+                            openingDirection = 7;
+                            break;
+                        case 2:
+                            openingDirection = 12;
+                            break;
+                        case 3:
+                            openingDirection = 15;
+                            break;
+                        default:
+                            break;
+                    }
                     room.SetOpeningDirection(openingDirection);
                     spawned = true;
                     templates.IncreaseSpawnCount(1);
@@ -634,7 +790,7 @@ public class RoomSpawner : MonoBehaviour
                     {
                         //spawn bottom/top/left room
                         room = Instantiate(templates.BTLRoom, transform.position, Quaternion.identity).GetComponent<Room>();
-                        room.SetOpeningDirection(openingDirection);
+                        room.SetOpeningDirection(11);
                         spawned = true;
                         templates.IncreaseSpawnCount(1);
                         break;
@@ -643,13 +799,30 @@ public class RoomSpawner : MonoBehaviour
                     {
                         //spawn top/left/right room
                         room = Instantiate(templates.TLRRoom, transform.position, Quaternion.identity).GetComponent<Room>();
-                        room.SetOpeningDirection(openingDirection);
+                        room.SetOpeningDirection(14);
                         spawned = true;
                         templates.IncreaseSpawnCount(1);
                         break;
                     }
                     int rand8 = templates.globalRandInt.Next(0, templates.TLRooms.Length - 1);
                     room = Instantiate(templates.TLRooms[rand8], transform.position, Quaternion.identity).GetComponent<Room>();
+                    switch (rand8)
+                    {
+                        case 0:
+                            openingDirection = 11;
+                            break;
+                        case 1:
+                            openingDirection = 8;
+                            break;
+                        case 2:
+                            openingDirection = 14;
+                            break;
+                        case 3:
+                            openingDirection = 15;
+                            break;
+                        default:
+                            break;
+                    }
                     room.SetOpeningDirection(openingDirection);
                     spawned = true;
                     templates.IncreaseSpawnCount(1);
@@ -668,7 +841,7 @@ public class RoomSpawner : MonoBehaviour
                     {
                         //spawn bottom/top/right room
                         room = Instantiate(templates.BTRRoom, transform.position, Quaternion.identity).GetComponent<Room>();
-                        room.SetOpeningDirection(openingDirection);
+                        room.SetOpeningDirection(12);
                         spawned = true;
                         templates.IncreaseSpawnCount(1);
                         break;
@@ -677,13 +850,30 @@ public class RoomSpawner : MonoBehaviour
                     {
                         //spawn top/left/right room
                         room = Instantiate(templates.TLRRoom, transform.position, Quaternion.identity).GetComponent<Room>();
-                        room.SetOpeningDirection(openingDirection);
+                        room.SetOpeningDirection(14);
                         spawned = true;
                         templates.IncreaseSpawnCount(1);
                         break;
                     }
                     int rand9 = templates.globalRandInt.Next(0, templates.TRRooms.Length - 1);
                     room = Instantiate(templates.TRRooms[rand9], transform.position, Quaternion.identity).GetComponent<Room>();
+                    switch (rand9)
+                    {
+                        case 0:
+                            openingDirection = 12;
+                            break;
+                        case 1:
+                            openingDirection = 14;
+                            break;
+                        case 2:
+                            openingDirection = 9;
+                            break;
+                        case 3:
+                            openingDirection = 15;
+                            break;
+                        default:
+                            break;
+                    }
                     room.SetOpeningDirection(openingDirection);
                     spawned = true;
                     templates.IncreaseSpawnCount(1);
@@ -702,7 +892,7 @@ public class RoomSpawner : MonoBehaviour
                     {
                         //spawn bottom/left/right room
                         room = Instantiate(templates.BLRRoom, transform.position, Quaternion.identity).GetComponent<Room>();
-                        room.SetOpeningDirection(openingDirection);
+                        room.SetOpeningDirection(13);
                         spawned = true;
                         templates.IncreaseSpawnCount(1);
                         break;
@@ -711,13 +901,30 @@ public class RoomSpawner : MonoBehaviour
                     {
                         //spawn top/left/right room
                         room = Instantiate(templates.TLRRoom, transform.position, Quaternion.identity).GetComponent<Room>();
-                        room.SetOpeningDirection(openingDirection);
+                        room.SetOpeningDirection(14);
                         spawned = true;
                         templates.IncreaseSpawnCount(1);
                         break;
                     }
                     int rand10 = templates.globalRandInt.Next(0, templates.LRRooms.Length - 1);
                     room = Instantiate(templates.LRRooms[rand10], transform.position, Quaternion.identity).GetComponent<Room>();
+                    switch (rand10)
+                    {
+                        case 0:
+                            openingDirection = 13;
+                            break;
+                        case 1:
+                            openingDirection = 10;
+                            break;
+                        case 2:
+                            openingDirection = 14;
+                            break;
+                        case 3:
+                            openingDirection = 15;
+                            break;
+                        default:
+                            break;
+                    }
                     room.SetOpeningDirection(openingDirection);
                     spawned = true;
                     templates.IncreaseSpawnCount(1);
@@ -734,6 +941,17 @@ public class RoomSpawner : MonoBehaviour
                     }
                     int rand11 = templates.globalRandInt.Next(0, templates.BTLRooms.Length - 1);
                     room = Instantiate(templates.BTLRooms[rand11], transform.position, Quaternion.identity).GetComponent<Room>();
+                    switch (rand11)
+                    {
+                        case 0:
+                            openingDirection = 11;
+                            break;
+                        case 1:
+                            openingDirection = 15;
+                            break;
+                        default:
+                            break;
+                    }
                     room.SetOpeningDirection(openingDirection);
                     spawned = true;
                     templates.IncreaseSpawnCount(1);
@@ -750,6 +968,17 @@ public class RoomSpawner : MonoBehaviour
                     }
                     int rand12 = templates.globalRandInt.Next(0, templates.BTRRooms.Length - 1);
                     room = Instantiate(templates.BTRRooms[rand12], transform.position, Quaternion.identity).GetComponent<Room>();
+                    switch (rand12)
+                    {
+                        case 0:
+                            openingDirection = 12;
+                            break;
+                        case 1:
+                            openingDirection = 15;
+                            break;
+                        default:
+                            break;
+                    }
                     room.SetOpeningDirection(openingDirection);
                     spawned = true;
                     templates.IncreaseSpawnCount(1);
@@ -766,6 +995,17 @@ public class RoomSpawner : MonoBehaviour
                     }
                     int rand13 = templates.globalRandInt.Next(0, templates.BLRRooms.Length - 1);
                     room = Instantiate(templates.BLRRooms[rand13], transform.position, Quaternion.identity).GetComponent<Room>();
+                    switch (rand13)
+                    {
+                        case 0:
+                            openingDirection = 13;
+                            break;
+                        case 1:
+                            openingDirection = 15;
+                            break;
+                        default:
+                            break;
+                    }
                     room.SetOpeningDirection(openingDirection);
                     spawned = true;
                     templates.IncreaseSpawnCount(1);
@@ -782,6 +1022,17 @@ public class RoomSpawner : MonoBehaviour
                     }
                     int rand14 = templates.globalRandInt.Next(0, templates.TLRRooms.Length - 1);
                     room = Instantiate(templates.TLRRooms[rand14], transform.position, Quaternion.identity).GetComponent<Room>();
+                    switch (rand14)
+                    {
+                        case 0:
+                            openingDirection = 14;
+                            break;
+                        case 1:
+                            openingDirection = 15;
+                            break;
+                        default:
+                            break;
+                    }
                     room.SetOpeningDirection(openingDirection);
                     spawned = true;
                     templates.IncreaseSpawnCount(1);
