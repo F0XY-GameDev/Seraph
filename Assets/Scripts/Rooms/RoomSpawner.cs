@@ -34,6 +34,7 @@ public class RoomSpawner : MonoBehaviour
         Debug.Log(templates);
         //int randomDelay = templates.globalRandInt.Next(15, 25);
         float delay = Random.Range(0.5f, 0.75f);
+        delay = 0.5f; 
         StartCoroutine(CheckForWalls(delay));
 
         StartCoroutine(Spawn());

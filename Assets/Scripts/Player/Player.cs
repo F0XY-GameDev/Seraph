@@ -5,6 +5,7 @@ using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.InputSystem.Interactions;
 using UnityEngine.Windows;
 
 public class Player : MonoBehaviour
@@ -13,7 +14,7 @@ public class Player : MonoBehaviour
     public int currentHealth;
     [SerializeField] private int money;
     private SpriteRenderer spriteRenderer;
-    [Header("Starting Stats")]
+    [Header("Player Stats")]
     public int[] stats; //0 is Body, 1 is Mind, 2 is Luck, 3 is Demonity
     public float shotSpeed;
     public int maxHealth;
@@ -22,16 +23,29 @@ public class Player : MonoBehaviour
     public int damage;
     public DamageType damageType;
     public int shotLifeTime;
-    public List<int> resistances = new List<int>(); //when damage of type comes in, compare index of DamageType enum to index in resistances  
+    public List<int> resistances = new List<int>(); //when damage of type comes in, compare index of DamageType enum to index in resistances
+
+    [Header("Ability Stats")]
+    public float ability2ChargeTime;
+    public int ability2ChannelTimer, ability2MaxChannel, ability2MinChannel;
+    public bool isChannelingAbility2;
+    public int ability2ChannelSpriteTimer;
 
     [Header("Debug Data")]
     public int iFrames;
     public GameObject damageNumber;
-    public int ability2ChannelTimer, ability2MaxChannel, ability2MinChannel;
-    public bool isChannelingAbility2;
 
-    [Header("Timers for Sprite Changing")]
-    public int ability2ChannelSpriteTimer;
+    [Header("Ability2 Stats")]
+    public Vector2[] ability2Directions;
+    public float ability2Speed;
+    public float ability2ShotSize;
+    public int ability2Damage;
+    public int ability2LifeTime;
+    public DamageType ability2DamageType;
+
+    [Header("Prefabs")]
+    public GameObject abilityBulletPrefab;
+
 
     private void Awake()
     {
@@ -146,6 +160,8 @@ public class Player : MonoBehaviour
     }
     private void OnAbility2Started(InputAction.CallbackContext value)
     {
+        var holdInteraction = value.interaction as HoldInteraction;
+        holdInteraction.duration = ability2ChargeTime;
         //start channeling
         isChannelingAbility2 = true;
     }
@@ -153,6 +169,14 @@ public class Player : MonoBehaviour
     {
         //channeled ability
         //release channeled ability
+        foreach (Vector2 direction in ability2Directions)
+        {
+            GameObject temporaryBullet = abilityBulletPrefab;
+            Bullet tempBullet = temporaryBullet.GetComponent<Bullet>();
+            tempBullet.SetDirection(direction);
+            //tempBullet.isAbilityBullet = true;
+            Instantiate(temporaryBullet, this.transform.position, Quaternion.identity).GetComponent<Bullet>();
+        }
         isChannelingAbility2 = false;
         ResetSpriteColor();
     }

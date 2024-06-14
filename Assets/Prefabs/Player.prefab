@@ -371,7 +371,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -1370751332749200531, guid: 51d0967d7bb23664eb8bb2133d149725, type: 3}
+  m_Sprite: {fileID: -146603621, guid: 5b09072cfe975aa48aa4f44b99b8b08c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -573,7 +573,7 @@ Rigidbody2D:
     m_Bits: 0
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 61440
+    m_Bits: 12288
   m_Interpolate: 1
   m_SleepingMode: 1
   m_CollisionDetection: 1
@@ -592,16 +592,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentHealth: 0
   money: 0
-  stats: 01000000010000000000000000000000
+  stats: 01000000010000000500000000000000
   shotSpeed: 5
   maxHealth: 0
   moveSpeed: 4
   shotSize: 0.6
   damage: 5
-  iFrames: 0
   damageType: 0
-  shotLifeTime: 100
+  shotLifeTime: 120
   resistances: 000000000000000000000000000000000000000000000000
+  ability2ChargeTime: 3
+  ability2ChannelTimer: 0
+  ability2MaxChannel: 0
+  ability2MinChannel: 0
+  isChannelingAbility2: 0
+  ability2ChannelSpriteTimer: 0
+  iFrames: 0
   damageNumber: {fileID: 5520532234202620945, guid: 9a5adcb074e7ea94e9ff6c8f31271205, type: 3}
 --- !u!114 &4422438110686498685
 MonoBehaviour:
@@ -723,6 +729,6 @@ CircleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -0.18}
+  m_Offset: {x: 0, y: -0.12}
   serializedVersion: 2
-  m_Radius: 0.35
+  m_Radius: 0.41

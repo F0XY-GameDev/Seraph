@@ -18,9 +18,10 @@ public class Bullet : MonoBehaviour
     private Player player;
     private float scale;
     public bool isPlayerBullet;
+    public bool isAbilityBullet;
     public bool isPersistent;
     public EShooter enemy;
-
+    
     private void Awake()
     {
         if (lifeSpan == 0)
@@ -28,7 +29,13 @@ public class Bullet : MonoBehaviour
             isPersistent = true;
         }
         rb = GetComponent<Rigidbody2D>();
-        if (isPlayerBullet)
+        
+
+
+    }
+    private void Start()
+    {
+        if (isPlayerBullet && !isAbilityBullet)
         {
             direction = FindAnyObjectByType<GameCursor>().transform.position;
             player = FindAnyObjectByType<Player>();
@@ -37,24 +44,27 @@ public class Bullet : MonoBehaviour
             damage = player.damage;
             damageType = player.damageType;
             lifeSpan = player.shotLifeTime;
-            return;
+        } 
+        else if (isAbilityBullet)
+        {
+            player = FindAnyObjectByType<Player>();
+            speed = player.ability2Speed;
+            scale = player.ability2ShotSize;
+            damage = player.ability2Damage;
+            damageType = player.ability2DamageType;
+            lifeSpan = player.ability2LifeTime;
         }
-        if (enemy == null)
+        else if (enemy == null && !isPlayerBullet)
         {
             enemy = FindAnyObjectByType<EShooter>();
+            direction = FindAnyObjectByType<Player>().GetComponent<Transform>().position;
+            speed = enemy.shotSpeed;
+            scale = enemy.shotSize;
+            damage = enemy.attackDamage;
+            damageType = enemy.attackDamageType;
+            lifeSpan = enemy.shotLifeSpan;
         }
-        direction = FindAnyObjectByType<Player>().GetComponent<Transform>().position;
-        speed = enemy.shotSpeed;
-        scale = enemy.shotSize;
-        damage = enemy.attackDamage;
-        damageType = enemy.attackDamageType;
-        lifeSpan = enemy.shotLifeSpan;
 
-
-    }
-    private void Start()
-    {
-        
         mainCam = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Camera>();
         mousePos = mainCam.ScreenToWorldPoint(Input.mousePosition);
         
@@ -82,9 +92,6 @@ public class Bullet : MonoBehaviour
         
         Vector3 tempDirection = new Vector3(Mathf.Clamp(direction.x, -1f, 1f), Mathf.Clamp(direction.y, -1f, 1f), 0);
         //rb.AddForce(tempDirection * speed);
-        Debug.Log("heading:" + heading);
-        Debug.Log("direction:" + direction);
-        Debug.Log("tempVelocity" + tempVelocity);
         if (direction.normalized.x <= 0.1 && direction.normalized.x >= -0.1)
         {
             Debug.Log("Slow Shot");
@@ -122,18 +129,22 @@ public class Bullet : MonoBehaviour
                 Destroy(this.gameObject);
                 return;
             }
-        }
-        Debug.Log(this.gameObject + " collided with" + collision.gameObject);
-        
+        }        
     }
     private void OnCollisionStay2D(Collision2D collision)
     {
-        Debug.Log(this.gameObject + " has collided with " +  collision.gameObject);
-        int wallLayer = LayerMask.NameToLayer("Wall");
+        int wallLayer = LayerMask.NameToLayer("Walls");
         if (collision.collider.gameObject.layer == wallLayer)
         {
-            Debug.Log(this.gameObject + " Collided with Wall");
-            Destroy(this.gameObject);
+            DestroyOnCollision();
         }
+    }
+    private void DestroyOnCollision()
+    {
+        Destroy(this.gameObject);
+    }
+    public void SetDirection(Vector2 _direction)
+    {
+        direction = _direction;
     }
 }

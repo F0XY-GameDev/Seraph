@@ -18,13 +18,17 @@ public class PlayerMovement2D : MonoBehaviour
     bool lockedDirection = false;
     public int dashTime;
     public int m_dashTime;
+    public int dashIFrames;
     public Rigidbody2D rb;
     private Vector2 movement = Vector2.zero;
+    private Player player;
+    
 
     private void Awake()
     {
         input = new CustomInput();
-        moveSpeed = FindAnyObjectByType<Player>().moveSpeed;
+        player = FindAnyObjectByType<Player>();
+        moveSpeed = player.moveSpeed;
         canMove = true;
     }
     private void OnEnable()
@@ -88,7 +92,8 @@ public class PlayerMovement2D : MonoBehaviour
         if (canDash) 
         { 
             if (movement != Vector2.zero) 
-            { 
+            {
+                player.iFrames = dashIFrames;
                 dashSpeed *= dashSpeedMult;
                 dashTime = m_dashTime; 
                 lockedDirection = true; 
