@@ -18,10 +18,15 @@ public class Bullet : MonoBehaviour
     private Player player;
     private float scale;
     public bool isPlayerBullet;
+    public bool isPersistent;
     public EShooter enemy;
 
     private void Awake()
     {
+        if (lifeSpan == 0)
+        {
+            isPersistent = true;
+        }
         rb = GetComponent<Rigidbody2D>();
         if (isPlayerBullet)
         {
@@ -87,7 +92,7 @@ public class Bullet : MonoBehaviour
     }
     private void FixedUpdate()
     {
-        
+        if (isPersistent) { return; }
         if (lifeSpan >= -2) { lifeSpan--; }
         if (lifeSpan < 0) 
         {

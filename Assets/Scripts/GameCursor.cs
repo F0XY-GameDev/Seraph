@@ -25,12 +25,12 @@ public class GameCursor : MonoBehaviour
     private void OnEnable()
     {
         cursorInput.Enable();
-        cursorInput.Player.Fire.performed += OnFire;
+        cursorInput.Player.Attack.performed += OnFire;
     }
     private void OnDisable()
     {
         cursorInput.Disable();
-        cursorInput.Player.Fire.performed -= OnFire;
+        cursorInput.Player.Attack.performed -= OnFire;
     }
 
     private void Update()

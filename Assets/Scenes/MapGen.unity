@@ -1485,6 +1485,10 @@ PrefabInstance:
       value: 12288
       objectReference: {fileID: 0}
     - target: {fileID: 7555649262041659103, guid: 169593ff00f1a934a826f354aefbc7a8, type: 3}
+      propertyPath: shotLifeTime
+      value: 120
+      objectReference: {fileID: 0}
+    - target: {fileID: 7555649262041659103, guid: 169593ff00f1a934a826f354aefbc7a8, type: 3}
       propertyPath: stats.Array.data[2]
       value: 5
       objectReference: {fileID: 0}

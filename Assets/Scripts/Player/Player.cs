@@ -2,12 +2,17 @@ using AllEnums;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.InputSystem;
+using UnityEngine.Windows;
 
 public class Player : MonoBehaviour
 {
+    private CustomInput input = null;
     public int currentHealth;
     [SerializeField] private int money;
+    private SpriteRenderer spriteRenderer;
     [Header("Starting Stats")]
     public int[] stats; //0 is Body, 1 is Mind, 2 is Luck, 3 is Demonity
     public float shotSpeed;
@@ -15,19 +20,62 @@ public class Player : MonoBehaviour
     public float moveSpeed;
     public float shotSize;
     public int damage;
-    public int iFrames;
     public DamageType damageType;
     public int shotLifeTime;
     public List<int> resistances = new List<int>(); //when damage of type comes in, compare index of DamageType enum to index in resistances  
-    public GameObject damageNumber;
 
+    [Header("Debug Data")]
+    public int iFrames;
+    public GameObject damageNumber;
+    public int ability2ChannelTimer, ability2MaxChannel, ability2MinChannel;
+    public bool isChannelingAbility2;
+
+    [Header("Timers for Sprite Changing")]
+    public int ability2ChannelSpriteTimer;
+
+    private void Awake()
+    {
+        input = new CustomInput();
+        spriteRenderer = GetComponentInChildren<SpriteRenderer>();
+    }
     private void Start()
     {
-        maxHealth = (stats[0] * 100) / 4;
+        if (stats[0] <= 0)
+        {
+            stats[0] = 1;
+        }
+        maxHealth = (stats[0] * 100 / 4) + 15;
         currentHealth = maxHealth;
+    }
+    private void OnEnable()
+    {
+        input.Enable();
+        input.Player.Ability1.performed += OnAbility1Performed;
+        input.Player.Ability1.canceled += OnAbility1Canceled;
+        input.Player.Ability2.started += OnAbility2Started;
+        input.Player.Ability2.performed += OnAbility2Performed;
+        input.Player.Ability2.canceled += OnAbility2Canceled;
+    }
+
+    private void OnDisable()
+    {
+        input.Disable();
+        input.Player.Ability1.performed -= OnAbility1Performed;
+        input.Player.Ability1.canceled -= OnAbility1Canceled;
+        input.Player.Ability2.started -= OnAbility2Started;
+        input.Player.Ability2.performed -= OnAbility2Performed;
+        input.Player.Ability2.canceled -= OnAbility2Canceled;
     }
     private void FixedUpdate()
     {
+        if (isChannelingAbility2)
+        {
+            ability2ChannelSpriteTimer--;
+            if (ability2ChannelSpriteTimer <= 0)
+            {
+                ToggleSpriteColor();
+            }
+        }
         if (currentHealth <= 0)
         {
             Die();
@@ -87,6 +135,47 @@ public class Player : MonoBehaviour
         {
             currentHealth = maxHealth;
         }
+    }
+    private void OnAbility1Performed(InputAction.CallbackContext value)
+    {
+        //instant ability
+    }
+    private void OnAbility1Canceled(InputAction.CallbackContext value)
+    {
+
+    }
+    private void OnAbility2Started(InputAction.CallbackContext value)
+    {
+        //start channeling
+        isChannelingAbility2 = true;
+    }
+    private void OnAbility2Performed(InputAction.CallbackContext value)
+    {
+        //channeled ability
+        //release channeled ability
+        isChannelingAbility2 = false;
+        ResetSpriteColor();
+    }
+    private void OnAbility2Canceled(InputAction.CallbackContext value)
+    {
+        //release channeled ability
+        isChannelingAbility2 = false;
+        ResetSpriteColor();
+    }
+    private void ToggleSpriteColor()
+    {
+        ability2ChannelSpriteTimer = 25;
+        if (spriteRenderer.color ==  Color.white)
+        {
+            spriteRenderer.color = Color.red;
+        }else
+        {
+            spriteRenderer.color = Color.white;
+        }
+    }
+    private void ResetSpriteColor()
+    {
+        spriteRenderer.color = Color.white;
     }
     private void Die()
     {

@@ -55,7 +55,7 @@ public partial class @CustomInput: IInputActionCollection2, IDisposable
                     ""initialStateCheck"": false
                 },
                 {
-                    ""name"": ""Fire"",
+                    ""name"": ""Attack"",
                     ""type"": ""Button"",
                     ""id"": ""31bfcaea-1035-4f23-bc88-01471d060754"",
                     ""expectedControlType"": ""Button"",
@@ -79,6 +79,24 @@ public partial class @CustomInput: IInputActionCollection2, IDisposable
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
                     ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Ability1"",
+                    ""type"": ""Button"",
+                    ""id"": ""d28a7177-3649-44cf-96a8-412255699a46"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Ability2"",
+                    ""type"": ""Button"",
+                    ""id"": ""de048a9a-f54d-40de-9657-270f38d73cc0"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": ""Hold(duration=3,pressPoint=0.2)"",
                     ""initialStateCheck"": false
                 }
             ],
@@ -244,7 +262,7 @@ public partial class @CustomInput: IInputActionCollection2, IDisposable
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""Fire"",
+                    ""action"": ""Attack"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 },
@@ -280,6 +298,28 @@ public partial class @CustomInput: IInputActionCollection2, IDisposable
                     ""action"": ""ToggleMap"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""3df0b383-f39c-466a-8ee0-335f270783a6"",
+                    ""path"": ""<Keyboard>/e"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Ability1"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""a7c38842-6dc9-4ea2-8df8-a0278ea25858"",
+                    ""path"": ""<Keyboard>/q"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Ability2"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -291,9 +331,11 @@ public partial class @CustomInput: IInputActionCollection2, IDisposable
         m_Player_Movement = m_Player.FindAction("Movement", throwIfNotFound: true);
         m_Player_Jump = m_Player.FindAction("Jump", throwIfNotFound: true);
         m_Player_Dash = m_Player.FindAction("Dash", throwIfNotFound: true);
-        m_Player_Fire = m_Player.FindAction("Fire", throwIfNotFound: true);
+        m_Player_Attack = m_Player.FindAction("Attack", throwIfNotFound: true);
         m_Player_MoveCursor = m_Player.FindAction("MoveCursor", throwIfNotFound: true);
         m_Player_ToggleMap = m_Player.FindAction("ToggleMap", throwIfNotFound: true);
+        m_Player_Ability1 = m_Player.FindAction("Ability1", throwIfNotFound: true);
+        m_Player_Ability2 = m_Player.FindAction("Ability2", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -358,9 +400,11 @@ public partial class @CustomInput: IInputActionCollection2, IDisposable
     private readonly InputAction m_Player_Movement;
     private readonly InputAction m_Player_Jump;
     private readonly InputAction m_Player_Dash;
-    private readonly InputAction m_Player_Fire;
+    private readonly InputAction m_Player_Attack;
     private readonly InputAction m_Player_MoveCursor;
     private readonly InputAction m_Player_ToggleMap;
+    private readonly InputAction m_Player_Ability1;
+    private readonly InputAction m_Player_Ability2;
     public struct PlayerActions
     {
         private @CustomInput m_Wrapper;
@@ -368,9 +412,11 @@ public partial class @CustomInput: IInputActionCollection2, IDisposable
         public InputAction @Movement => m_Wrapper.m_Player_Movement;
         public InputAction @Jump => m_Wrapper.m_Player_Jump;
         public InputAction @Dash => m_Wrapper.m_Player_Dash;
-        public InputAction @Fire => m_Wrapper.m_Player_Fire;
+        public InputAction @Attack => m_Wrapper.m_Player_Attack;
         public InputAction @MoveCursor => m_Wrapper.m_Player_MoveCursor;
         public InputAction @ToggleMap => m_Wrapper.m_Player_ToggleMap;
+        public InputAction @Ability1 => m_Wrapper.m_Player_Ability1;
+        public InputAction @Ability2 => m_Wrapper.m_Player_Ability2;
         public InputActionMap Get() { return m_Wrapper.m_Player; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -389,15 +435,21 @@ public partial class @CustomInput: IInputActionCollection2, IDisposable
             @Dash.started += instance.OnDash;
             @Dash.performed += instance.OnDash;
             @Dash.canceled += instance.OnDash;
-            @Fire.started += instance.OnFire;
-            @Fire.performed += instance.OnFire;
-            @Fire.canceled += instance.OnFire;
+            @Attack.started += instance.OnAttack;
+            @Attack.performed += instance.OnAttack;
+            @Attack.canceled += instance.OnAttack;
             @MoveCursor.started += instance.OnMoveCursor;
             @MoveCursor.performed += instance.OnMoveCursor;
             @MoveCursor.canceled += instance.OnMoveCursor;
             @ToggleMap.started += instance.OnToggleMap;
             @ToggleMap.performed += instance.OnToggleMap;
             @ToggleMap.canceled += instance.OnToggleMap;
+            @Ability1.started += instance.OnAbility1;
+            @Ability1.performed += instance.OnAbility1;
+            @Ability1.canceled += instance.OnAbility1;
+            @Ability2.started += instance.OnAbility2;
+            @Ability2.performed += instance.OnAbility2;
+            @Ability2.canceled += instance.OnAbility2;
         }
 
         private void UnregisterCallbacks(IPlayerActions instance)
@@ -411,15 +463,21 @@ public partial class @CustomInput: IInputActionCollection2, IDisposable
             @Dash.started -= instance.OnDash;
             @Dash.performed -= instance.OnDash;
             @Dash.canceled -= instance.OnDash;
-            @Fire.started -= instance.OnFire;
-            @Fire.performed -= instance.OnFire;
-            @Fire.canceled -= instance.OnFire;
+            @Attack.started -= instance.OnAttack;
+            @Attack.performed -= instance.OnAttack;
+            @Attack.canceled -= instance.OnAttack;
             @MoveCursor.started -= instance.OnMoveCursor;
             @MoveCursor.performed -= instance.OnMoveCursor;
             @MoveCursor.canceled -= instance.OnMoveCursor;
             @ToggleMap.started -= instance.OnToggleMap;
             @ToggleMap.performed -= instance.OnToggleMap;
             @ToggleMap.canceled -= instance.OnToggleMap;
+            @Ability1.started -= instance.OnAbility1;
+            @Ability1.performed -= instance.OnAbility1;
+            @Ability1.canceled -= instance.OnAbility1;
+            @Ability2.started -= instance.OnAbility2;
+            @Ability2.performed -= instance.OnAbility2;
+            @Ability2.canceled -= instance.OnAbility2;
         }
 
         public void RemoveCallbacks(IPlayerActions instance)
@@ -442,8 +500,10 @@ public partial class @CustomInput: IInputActionCollection2, IDisposable
         void OnMovement(InputAction.CallbackContext context);
         void OnJump(InputAction.CallbackContext context);
         void OnDash(InputAction.CallbackContext context);
-        void OnFire(InputAction.CallbackContext context);
+        void OnAttack(InputAction.CallbackContext context);
         void OnMoveCursor(InputAction.CallbackContext context);
         void OnToggleMap(InputAction.CallbackContext context);
+        void OnAbility1(InputAction.CallbackContext context);
+        void OnAbility2(InputAction.CallbackContext context);
     }
 }

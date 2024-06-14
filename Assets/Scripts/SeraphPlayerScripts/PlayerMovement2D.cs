@@ -42,7 +42,7 @@ public class PlayerMovement2D : MonoBehaviour
         input.Player.Movement.performed -= OnMovementPerformed;
         input.Player.Movement.canceled -= OnMovementCancelled;
         input.Player.Dash.performed -= OnDashPerformed;
-        input.Player.Dash.performed -= OnDashCancelled;
+        input.Player.Dash.canceled -= OnDashCancelled;
     }
     private void FixedUpdate()
     {
