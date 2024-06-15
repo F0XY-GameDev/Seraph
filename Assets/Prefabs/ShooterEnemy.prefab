@@ -167,7 +167,7 @@ MonoBehaviour:
   shotSize: 0.77
   shotLifeSpan: 100
   attackDamageType: 2
-  contactDamage: 0
+  contactDamage: 2
   contactDamageType: 0
   bulletPrefab: {fileID: 5037329367947450656, guid: 62ec78621a74a284287a965df5791c48, type: 3}
   resistances: 000000000000000000000000000000000000000000000000

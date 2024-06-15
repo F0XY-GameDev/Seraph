@@ -14,6 +14,7 @@ TagManager:
   - Wall
   - CameraMover
   - SpawnCollider
+  - Enemy
   layers:
   - Default
   - TransparentFX

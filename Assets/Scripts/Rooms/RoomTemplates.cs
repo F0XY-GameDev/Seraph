@@ -88,8 +88,8 @@ public class RoomTemplates : MonoBehaviour
     private void Awake()
     {
         spawnCount = 0;
-        //globalSeed = Random.Range(0, 99999);
-        globalSeed = 19929;
+        globalSeed = Random.Range(0, 99999);
+        //globalSeed = 19929;
         globalRandInt = new System.Random(globalSeed);
         waitTime = 5f;
     }

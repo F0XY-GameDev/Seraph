@@ -33,6 +33,7 @@ public class Player : MonoBehaviour
 
     [Header("Debug Data")]
     public int iFrames;
+    public int iFramesFromTakingDamage;
     public GameObject damageNumber;
 
     [Header("Ability2 Stats")]
@@ -125,6 +126,10 @@ public class Player : MonoBehaviour
             }        
             float finalDamage = incomingDamage - (int)Mathf.Clamp((incomingDamage * ((1+ resistance) / 100)), 0 , (float)incomingDamage * 0.8f);
             ReduceHealth(Mathf.RoundToInt(finalDamage));
+            if (col.CompareTag("Bullet"))
+            {
+                Destroy(col.gameObject);
+            }
         }
     }
     private void AddMoney(int amount)
@@ -138,6 +143,7 @@ public class Player : MonoBehaviour
             return;
         }
         currentHealth -= amount;
+        iFrames += iFramesFromTakingDamage;
         GameObject go = damageNumber;
         go.GetComponent<TextMeshProUGUI>().text = ("-" + amount.ToString());
         Instantiate(go, GetComponentInChildren<Canvas>().transform);

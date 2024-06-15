@@ -393,7 +393,7 @@ Camera:
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 84991
+    m_Bits: 117759
   m_RenderingPath: -1
   m_TargetTexture: {fileID: 0}
   m_TargetDisplay: 0
@@ -1372,35 +1372,46 @@ MonoBehaviour:
   bottomTopEncounters:
   - {fileID: 749232222163854580, guid: b19da8d6ea348de46845a21fe69928bd, type: 3}
   - {fileID: 5261375771749936855, guid: 4e76e38ea379fff49b0559872d76b0dd, type: 3}
+  - {fileID: 5261375771749936855, guid: 4e76e38ea379fff49b0559872d76b0dd, type: 3}
   bottomLeftEncounters:
   - {fileID: 749232222163854580, guid: b19da8d6ea348de46845a21fe69928bd, type: 3}
+  - {fileID: 5261375771749936855, guid: 4e76e38ea379fff49b0559872d76b0dd, type: 3}
   - {fileID: 5261375771749936855, guid: 4e76e38ea379fff49b0559872d76b0dd, type: 3}
   bottomRightEncounters:
   - {fileID: 749232222163854580, guid: b19da8d6ea348de46845a21fe69928bd, type: 3}
   - {fileID: 5261375771749936855, guid: 4e76e38ea379fff49b0559872d76b0dd, type: 3}
+  - {fileID: 5261375771749936855, guid: 4e76e38ea379fff49b0559872d76b0dd, type: 3}
   topLeftEncounters:
   - {fileID: 749232222163854580, guid: b19da8d6ea348de46845a21fe69928bd, type: 3}
+  - {fileID: 5261375771749936855, guid: 4e76e38ea379fff49b0559872d76b0dd, type: 3}
   - {fileID: 5261375771749936855, guid: 4e76e38ea379fff49b0559872d76b0dd, type: 3}
   topRightEncounters:
   - {fileID: 749232222163854580, guid: b19da8d6ea348de46845a21fe69928bd, type: 3}
   - {fileID: 5261375771749936855, guid: 4e76e38ea379fff49b0559872d76b0dd, type: 3}
+  - {fileID: 5261375771749936855, guid: 4e76e38ea379fff49b0559872d76b0dd, type: 3}
   leftRightEncounters:
   - {fileID: 749232222163854580, guid: b19da8d6ea348de46845a21fe69928bd, type: 3}
+  - {fileID: 5261375771749936855, guid: 4e76e38ea379fff49b0559872d76b0dd, type: 3}
   - {fileID: 5261375771749936855, guid: 4e76e38ea379fff49b0559872d76b0dd, type: 3}
   bottomTopLeftEncounters:
   - {fileID: 749232222163854580, guid: b19da8d6ea348de46845a21fe69928bd, type: 3}
   - {fileID: 5261375771749936855, guid: 4e76e38ea379fff49b0559872d76b0dd, type: 3}
+  - {fileID: 5261375771749936855, guid: 4e76e38ea379fff49b0559872d76b0dd, type: 3}
   bottomTopRightEncounters:
   - {fileID: 749232222163854580, guid: b19da8d6ea348de46845a21fe69928bd, type: 3}
+  - {fileID: 5261375771749936855, guid: 4e76e38ea379fff49b0559872d76b0dd, type: 3}
   - {fileID: 5261375771749936855, guid: 4e76e38ea379fff49b0559872d76b0dd, type: 3}
   bottomLeftRightEncounters:
   - {fileID: 749232222163854580, guid: b19da8d6ea348de46845a21fe69928bd, type: 3}
   - {fileID: 5261375771749936855, guid: 4e76e38ea379fff49b0559872d76b0dd, type: 3}
+  - {fileID: 5261375771749936855, guid: 4e76e38ea379fff49b0559872d76b0dd, type: 3}
   topLeftRightEncounters:
   - {fileID: 749232222163854580, guid: b19da8d6ea348de46845a21fe69928bd, type: 3}
   - {fileID: 5261375771749936855, guid: 4e76e38ea379fff49b0559872d76b0dd, type: 3}
+  - {fileID: 5261375771749936855, guid: 4e76e38ea379fff49b0559872d76b0dd, type: 3}
   bottomTopLeftRightEncounters:
   - {fileID: 749232222163854580, guid: b19da8d6ea348de46845a21fe69928bd, type: 3}
+  - {fileID: 5261375771749936855, guid: 4e76e38ea379fff49b0559872d76b0dd, type: 3}
   - {fileID: 5261375771749936855, guid: 4e76e38ea379fff49b0559872d76b0dd, type: 3}
   rooms: []
   closedRoom: {fileID: 6442764610965306572, guid: 9e35daa803d892049b85c2ded52bf25e, type: 3}

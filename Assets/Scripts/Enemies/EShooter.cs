@@ -21,7 +21,7 @@ public class EShooter : MonoBehaviour
     public int shotLifeSpan;
     public DamageType attackDamageType;
     public int contactDamage;
-    public int contactDamageType;
+    public DamageType contactDamageType;
     public GameObject bulletPrefab;
     private bool isAttacking;
     public List<int> resistances = new List<int>(); // when damage of type comes in, compare index of DamageType enum to index in resistances  
@@ -69,9 +69,11 @@ public class EShooter : MonoBehaviour
         {
             timeBetweenAttacks = Random.Range(50, 150);
         }
-        var heading = target.position - this.transform.position;        
-        bulletPrefab.GetComponent<Bullet>().enemy = this;
-        Instantiate(bulletPrefab, this.transform.position, Quaternion.identity);
+        var heading = target.position - this.transform.position;
+        Bullet tempBullet = Instantiate(bulletPrefab, this.transform.position, Quaternion.identity).GetComponent<Bullet>();
+        tempBullet.enemy = this;
+        tempBullet.isEnemyBullet = true;
+        tempBullet.heading = heading;
         Debug.Log("Shot Fired");
     }
     private IEnumerator RestingBetweenAttacks()

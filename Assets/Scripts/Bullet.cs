@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using static UnityEngine.GraphicsBuffer;
 
 public class Bullet : MonoBehaviour
 {
@@ -19,8 +20,10 @@ public class Bullet : MonoBehaviour
     private float scale;
     public bool isPlayerBullet;
     public bool isAbilityBullet;
+    public bool isEnemyBullet;
     public bool isPersistent;
     public EShooter enemy;
+    public Vector3 heading;
     
     private void Awake()
     {
@@ -29,9 +32,6 @@ public class Bullet : MonoBehaviour
             isPersistent = true;
         }
         rb = GetComponent<Rigidbody2D>();
-        
-
-
     }
     private void Start()
     {
@@ -44,7 +44,7 @@ public class Bullet : MonoBehaviour
             damage = player.damage;
             damageType = player.damageType;
             lifeSpan = player.shotLifeTime;
-        } 
+        }
         else if (isAbilityBullet)
         {
             player = FindAnyObjectByType<Player>();
@@ -54,10 +54,10 @@ public class Bullet : MonoBehaviour
             damageType = player.ability2DamageType;
             lifeSpan = player.ability2LifeTime;
         }
-        else if (enemy == null && !isPlayerBullet)
+        else if (isEnemyBullet)
         {
-            enemy = FindAnyObjectByType<EShooter>();
-            direction = FindAnyObjectByType<Player>().GetComponent<Transform>().position;
+            //enemy = FindAnyObjectByType<EShooter>();
+            direction = FindAnyObjectByType<Player>().transform.position;
             speed = enemy.shotSpeed;
             scale = enemy.shotSize;
             damage = enemy.attackDamage;
@@ -67,15 +67,25 @@ public class Bullet : MonoBehaviour
 
         mainCam = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Camera>();
         mousePos = mainCam.ScreenToWorldPoint(Input.mousePosition);
-        
 
-        var heading = direction - this.transform.position;
-        var rotation = transform.position - mousePos;
+        Vector3 rotation;
+        if (isAbilityBullet)
+        {
+            heading = direction;
+        } else if (isPlayerBullet && !isAbilityBullet)
+        {
+            heading = direction - transform.position;
+        } else if (isEnemyBullet)
+        {
+            heading = direction - transform.position;
+        }
+        Debug.Log("Heading is " + heading);
+        rotation = transform.position - mousePos;
         rb.velocity = new Vector2(heading.x, heading.y).normalized * speed;
         float rot = Mathf.Atan2(rotation.y, rotation.x) * Mathf.Rad2Deg;
         transform.rotation = Quaternion.Euler(0, 0, rot + 90);
         transform.localScale = transform.localScale * scale;
-
+        Debug.Log(heading);
 
         Vector2 tempVelocity = new Vector2(Mathf.Clamp(heading.x, -bulletSpeedMinMax, bulletSpeedMinMax) * speed, Mathf.Clamp(heading.y, -bulletSpeedMinMax, bulletSpeedMinMax) * speed);
 
@@ -110,7 +120,7 @@ public class Bullet : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        if (isPlayerBullet)
+        if (isPlayerBullet || isAbilityBullet)
         {
             //this is doing nothing, debug it later, for now you've put in a timer and it deletes after the time
             if (collision.collider.CompareTag("Player"))
@@ -122,14 +132,22 @@ public class Bullet : MonoBehaviour
                 Destroy(this.gameObject);
                 return;
             }
-        } else
+        }         
+        else 
         {
             if (collision.collider.CompareTag("Player"))
             {
                 Destroy(this.gameObject);
                 return;
             }
-        }        
+        }
+        if (isEnemyBullet)
+        {
+            if (collision.collider.CompareTag("Player"))
+            {
+                Destroy(this.gameObject);
+            }
+        }
     }
     private void OnCollisionStay2D(Collision2D collision)
     {

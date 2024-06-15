@@ -203,8 +203,10 @@ MonoBehaviour:
   damageType: 0
   isPlayerBullet: 1
   isAbilityBullet: 1
+  isEnemyBullet: 0
   isPersistent: 0
   enemy: {fileID: 0}
+  heading: {x: 0, y: 0, z: 0}
 --- !u!58 &1313514785875717180
 CircleCollider2D:
   m_ObjectHideFlags: 0
