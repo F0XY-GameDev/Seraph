@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: e5c61bd25064c2948ac1fdd263ceded7
+guid: 71da5c3d42c77974c8eea4fd7822c1b0
 ScriptedImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -95,7 +95,7 @@ ScriptedImporter:
     addSortingGroup: 1
     addShadowCasters: 0
   importFileNodeState: 1
-  platformSettingsDirtyTick: 638540555525026724
+  platformSettingsDirtyTick: 638540591387070587
   textureAssetName: 
   singleSpriteImportData:
   - name: 
@@ -119,58 +119,18 @@ ScriptedImporter:
     tessellationDetail: 0
     uvTransform: {x: 0, y: 0}
   animatedSpriteImportData:
-  - name: CockMonsterIdle
+  - name: Rock
     originalName: 
-    pivot: {x: 0.5, y: -0.15217392}
-    alignment: 9
-    border: {x: 0, y: 0, z: 0, w: 0}
-    rect:
-      serializedVersion: 2
-      x: 49
-      y: 4
-      width: 36
-      height: 46
-    spriteID: 6869f74a78917394484481850b52c017
-    spriteBone: []
-    spriteOutline: []
-    vertices: []
-    spritePhysicsOutline: []
-    indices: 
-    edges: []
-    tessellationDetail: 0
-    uvTransform: {x: 49, y: 4}
-  - name: CockMonsterIdle_Frame_1
-    originalName: 
-    pivot: {x: 0.5, y: -0.15555556}
-    alignment: 9
-    border: {x: 0, y: 0, z: 0, w: 0}
-    rect:
-      serializedVersion: 2
-      x: 49
-      y: 112
-      width: 36
-      height: 45
-    spriteID: 6abe9fc59948d034f9baeb00e02b1654
-    spriteBone: []
-    spriteOutline: []
-    vertices: []
-    spritePhysicsOutline: []
-    indices: 
-    edges: []
-    tessellationDetail: 0
-    uvTransform: {x: 49, y: 112}
-  - name: CockMonsterIdle_Frame_2
-    originalName: 
-    pivot: {x: 0.4864865, y: -0.15217392}
+    pivot: {x: 0.5, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
       x: 4
       y: 4
-      width: 37
-      height: 46
-    spriteID: 6d426194f5b15464f871e183a31012b6
+      width: 64
+      height: 64
+    spriteID: d9a12fe99354a1e4e8875014135e1f1a
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -179,179 +139,23 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 4, y: 4}
-  - name: CockMonsterIdle_Frame_3
-    originalName: 
-    pivot: {x: 0.4864865, y: -0.15555556}
-    alignment: 9
-    border: {x: 0, y: 0, z: 0, w: 0}
-    rect:
-      serializedVersion: 2
-      x: 4
-      y: 112
-      width: 37
-      height: 45
-    spriteID: 84c056a3c778cb44691e2a0ff4fcbbaf
-    spriteBone: []
-    spriteOutline: []
-    vertices: []
-    spritePhysicsOutline: []
-    indices: 
-    edges: []
-    tessellationDetail: 0
-    uvTransform: {x: 4, y: 112}
-  - name: CockMonsterIdle_Frame_4
-    originalName: 
-    pivot: {x: 0.5, y: -0.15217392}
-    alignment: 9
-    border: {x: 0, y: 0, z: 0, w: 0}
-    rect:
-      serializedVersion: 2
-      x: 49
-      y: 58
-      width: 36
-      height: 46
-    spriteID: 098ee106aee02c844bbb8f5fde5f2629
-    spriteBone: []
-    spriteOutline: []
-    vertices: []
-    spritePhysicsOutline: []
-    indices: 
-    edges: []
-    tessellationDetail: 0
-    uvTransform: {x: 49, y: 58}
-  - name: CockMonsterIdle_Frame_5
-    originalName: 
-    pivot: {x: 0.5, y: -0.15555556}
-    alignment: 9
-    border: {x: 0, y: 0, z: 0, w: 0}
-    rect:
-      serializedVersion: 2
-      x: 49
-      y: 165
-      width: 36
-      height: 45
-    spriteID: 8d6a55f94ed7a6e4481eb7e57efa43e8
-    spriteBone: []
-    spriteOutline: []
-    vertices: []
-    spritePhysicsOutline: []
-    indices: 
-    edges: []
-    tessellationDetail: 0
-    uvTransform: {x: 49, y: 165}
-  - name: CockMonsterIdle_Frame_6
-    originalName: 
-    pivot: {x: 0.5135135, y: -0.15217392}
-    alignment: 9
-    border: {x: 0, y: 0, z: 0, w: 0}
-    rect:
-      serializedVersion: 2
-      x: 4
-      y: 58
-      width: 37
-      height: 46
-    spriteID: 97991edaf0d327a4e80baeabc721e771
-    spriteBone: []
-    spriteOutline: []
-    vertices: []
-    spritePhysicsOutline: []
-    indices: 
-    edges: []
-    tessellationDetail: 0
-    uvTransform: {x: 4, y: 58}
-  - name: CockMonsterIdle_Frame_7
-    originalName: 
-    pivot: {x: 0.5135135, y: -0.15555556}
-    alignment: 9
-    border: {x: 0, y: 0, z: 0, w: 0}
-    rect:
-      serializedVersion: 2
-      x: 4
-      y: 165
-      width: 37
-      height: 45
-    spriteID: a0522c2cae29645449a2a06aeb0f8e2f
-    spriteBone: []
-    spriteOutline: []
-    vertices: []
-    spritePhysicsOutline: []
-    indices: 
-    edges: []
-    tessellationDetail: 0
-    uvTransform: {x: 4, y: 165}
   spriteSheetImportData: []
   asepriteLayers:
   - layerIndex: 0
-    guid: 1263115274
-    name: CockMonsterIdle
+    guid: 419320357
+    name: Rock
     layerFlags: 0
     layerType: 0
     blendMode: 0
     cells:
-    - name: CockMonsterIdle_Frame_0
+    - name: Rock
       frameIndex: 0
       cellRect:
-        x: 14
-        y: 7
-        width: 36
-        height: 46
-      spriteId: 6869f74a78917394484481850b52c017
-    - name: CockMonsterIdle_Frame_1
-      frameIndex: 1
-      cellRect:
-        x: 14
-        y: 7
-        width: 36
-        height: 45
-      spriteId: 6abe9fc59948d034f9baeb00e02b1654
-    - name: CockMonsterIdle_Frame_2
-      frameIndex: 2
-      cellRect:
-        x: 14
-        y: 7
-        width: 37
-        height: 46
-      spriteId: 6d426194f5b15464f871e183a31012b6
-    - name: CockMonsterIdle_Frame_3
-      frameIndex: 3
-      cellRect:
-        x: 14
-        y: 7
-        width: 37
-        height: 45
-      spriteId: 84c056a3c778cb44691e2a0ff4fcbbaf
-    - name: CockMonsterIdle_Frame_4
-      frameIndex: 4
-      cellRect:
-        x: 14
-        y: 7
-        width: 36
-        height: 46
-      spriteId: 098ee106aee02c844bbb8f5fde5f2629
-    - name: CockMonsterIdle_Frame_5
-      frameIndex: 5
-      cellRect:
-        x: 14
-        y: 7
-        width: 36
-        height: 45
-      spriteId: 8d6a55f94ed7a6e4481eb7e57efa43e8
-    - name: CockMonsterIdle_Frame_6
-      frameIndex: 6
-      cellRect:
-        x: 13
-        y: 7
-        width: 37
-        height: 46
-      spriteId: 97991edaf0d327a4e80baeabc721e771
-    - name: CockMonsterIdle_Frame_7
-      frameIndex: 7
-      cellRect:
-        x: 13
-        y: 7
-        width: 37
-        height: 45
-      spriteId: a0522c2cae29645449a2a06aeb0f8e2f
+        x: 0
+        y: 0
+        width: 64
+        height: 64
+      spriteId: d9a12fe99354a1e4e8875014135e1f1a
     linkedCells: []
     parentIndex: -1
   platformSettings:

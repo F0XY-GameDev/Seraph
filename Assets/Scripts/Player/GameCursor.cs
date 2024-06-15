@@ -11,6 +11,9 @@ public class GameCursor : MonoBehaviour
     private Camera cam;
     Vector3 point = new Vector3();
     public GameObject bullet;
+    public bool canShoot;
+    public int shootCooldown;
+    public int maxShootCooldown;
     CustomInput cursorInput;
 
     private void Awake()
@@ -20,6 +23,8 @@ public class GameCursor : MonoBehaviour
     }
     void Start()
     {
+        Player p = player.GetComponent<Player>();
+        maxShootCooldown = p.attackCooldown;
         cam = Camera.main;
     }
     private void OnEnable()
@@ -39,6 +44,15 @@ public class GameCursor : MonoBehaviour
         lineRenderer.SetPosition(1, transform.localPosition);
         transform.position = cam.ScreenToWorldPoint(new Vector3(UnityEngine.Input.mousePosition.x, UnityEngine.Input.mousePosition.y, cam.nearClipPlane));
     }
+    private void FixedUpdate()
+    {
+        shootCooldown--;
+        if (shootCooldown <= 0 )
+        {
+            shootCooldown = 0;
+            canShoot = true;
+        }
+    }
     public void EnableCursorLine()
     {
         lineRenderer.enabled = true;
@@ -49,7 +63,13 @@ public class GameCursor : MonoBehaviour
     }
     private void OnFire(InputAction.CallbackContext value)
     {
+        if (!canShoot)
+        {
+            return;
+        }
         Instantiate(bullet, player.transform.position, Quaternion.identity);
+        shootCooldown = maxShootCooldown;
+        canShoot = false;
     }
     public Vector3 DirectionToCursor(Transform other)
     {
@@ -57,5 +77,10 @@ public class GameCursor : MonoBehaviour
         Vector3 value = this.transform.position - other.position;
         Debug.Log("CursorPosition" + this.transform.position);
         return value;
+    }
+    public void UpdatePlayerStats()
+    {
+        Player p = player.GetComponent<Player>();
+        maxShootCooldown = p.attackCooldown;
     }
 }

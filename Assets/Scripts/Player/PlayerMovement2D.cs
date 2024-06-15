@@ -50,6 +50,7 @@ public class PlayerMovement2D : MonoBehaviour
     }
     private void FixedUpdate()
     {
+        moveSpeed = player.moveSpeed;
         if (!canMove)
         {
             return;

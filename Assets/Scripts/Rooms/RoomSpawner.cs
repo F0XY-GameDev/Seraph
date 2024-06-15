@@ -39,7 +39,7 @@ public class RoomSpawner : MonoBehaviour
 
         StartCoroutine(Spawn());
     }
-    private IEnumerator CheckForWalls(float delay)
+    private IEnumerator CheckForWalls(float delay = 0.2f)
     {
         yield return new WaitForSeconds(delay);
         RaycastHit2D topHit = Physics2D.CircleCast(this.transform.position, 0.1f, Vector2.up, 13.1f);
@@ -104,6 +104,9 @@ public class RoomSpawner : MonoBehaviour
     }
     private IEnumerator Spawn()
     {
+        yield return new WaitUntil(() => checkedForWalls == true);
+        float randomDelay = (float)templates.globalRandInt.NextDouble();
+        yield return new WaitForSeconds(randomDelay);
         var col = Physics2D.OverlapCircle(this.transform.position, 2f);
         if (col != null)
         {
@@ -111,8 +114,7 @@ public class RoomSpawner : MonoBehaviour
             {
                 Destroy(gameObject);
             }
-        }
-        yield return new WaitUntil(() => checkedForWalls == true);
+        }        
         Room room;
         if (!spawned)
         {
@@ -148,7 +150,7 @@ public class RoomSpawner : MonoBehaviour
                     default:
                         break;
                 }
-                if (templates.waitTime <= 0.5f) { templates.waitTime += 0.5f; }
+                if (templates.waitTime <= 1f) { templates.waitTime += 1f; }
                 if (spawned) { yield break; }
             }
                         /*if at spawnpoint.position + 12 (in x direction) is GObj tagged CameraMover, also need opening in Right direction

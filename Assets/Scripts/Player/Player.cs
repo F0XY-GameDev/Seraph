@@ -19,7 +19,10 @@ public class Player : MonoBehaviour
     public float shotSpeed;
     public int maxHealth;
     public float moveSpeed;
+    public float chargeMoveSpeed;
+    public float regularMoveSpeed;
     public float shotSize;
+    public int attackCooldown;
     public int damage;
     public DamageType damageType;
     public int shotLifeTime;
@@ -166,6 +169,7 @@ public class Player : MonoBehaviour
     }
     private void OnAbility2Started(InputAction.CallbackContext value)
     {
+        moveSpeed = chargeMoveSpeed;
         var holdInteraction = value.interaction as HoldInteraction;
         holdInteraction.duration = ability2ChargeTime;
         //start channeling
@@ -175,6 +179,7 @@ public class Player : MonoBehaviour
     {
         //channeled ability
         //release channeled ability
+        moveSpeed = regularMoveSpeed;
         foreach (Vector2 direction in ability2Directions)
         {
             GameObject temporaryBullet = abilityBulletPrefab;
@@ -188,6 +193,7 @@ public class Player : MonoBehaviour
     }
     private void OnAbility2Canceled(InputAction.CallbackContext value)
     {
+        moveSpeed = regularMoveSpeed;
         //release channeled ability
         isChannelingAbility2 = false;
         ResetSpriteColor();

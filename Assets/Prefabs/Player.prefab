@@ -324,7 +324,7 @@ Transform:
   m_GameObject: {fileID: 6361232431655480035}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: -0.51, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -371,7 +371,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -146603621, guid: 5b09072cfe975aa48aa4f44b99b8b08c, type: 3}
+  m_Sprite: {fileID: -7690699204990117860, guid: 896f524a98abcec45b28c861b5bb9fac, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -392,7 +392,7 @@ Animator:
   m_GameObject: {fileID: 6361232431655480035}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: -1626134182673196679, guid: 51d0967d7bb23664eb8bb2133d149725, type: 3}
+  m_Controller: {fileID: -5920380242771239589, guid: 896f524a98abcec45b28c861b5bb9fac, type: 3}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -592,11 +592,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentHealth: 0
   money: 0
-  stats: 01000000010000000500000000000000
+  stats: 01000000010000000100000000000000
   shotSpeed: 5
   maxHealth: 0
   moveSpeed: 4
+  chargeMoveSpeed: 2
+  regularMoveSpeed: 4
   shotSize: 0.6
+  attackCooldown: 15
   damage: 5
   damageType: 0
   shotLifeTime: 120
@@ -608,7 +611,23 @@ MonoBehaviour:
   isChannelingAbility2: 0
   ability2ChannelSpriteTimer: 0
   iFrames: 0
+  iFramesFromTakingDamage: 0
   damageNumber: {fileID: 5520532234202620945, guid: 9a5adcb074e7ea94e9ff6c8f31271205, type: 3}
+  ability2Directions:
+  - {x: 0, y: 1}
+  - {x: 1, y: 0}
+  - {x: 1, y: 1}
+  - {x: -1, y: -1}
+  - {x: -1, y: 0}
+  - {x: 0, y: -1}
+  - {x: -1, y: 1}
+  - {x: 1, y: -1}
+  ability2Speed: 10
+  ability2ShotSize: 1
+  ability2Damage: 10
+  ability2LifeTime: 120
+  ability2DamageType: 2
+  abilityBulletPrefab: {fileID: 5037329367947450656, guid: d6121f2b2e7b81b40bfb9cb7b3a204dd, type: 3}
 --- !u!114 &4422438110686498685
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -626,6 +645,7 @@ MonoBehaviour:
   dashCooldown: 0.5
   dashTime: 0
   m_dashTime: 6
+  dashIFrames: 25
   rb: {fileID: 4831522230388898894}
 --- !u!70 &9162210341459341221
 CapsuleCollider2D:

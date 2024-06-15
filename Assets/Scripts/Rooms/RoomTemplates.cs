@@ -89,7 +89,7 @@ public class RoomTemplates : MonoBehaviour
     {
         spawnCount = 0;
         globalSeed = Random.Range(0, 99999);
-        //globalSeed = 19929;
+        //globalSeed = 64364;
         globalRandInt = new System.Random(globalSeed);
         waitTime = 5f;
     }
