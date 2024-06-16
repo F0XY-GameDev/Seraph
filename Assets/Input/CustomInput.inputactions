@@ -76,6 +76,15 @@
                     "processors": "",
                     "interactions": "Hold(duration=3,pressPoint=0.2)",
                     "initialStateCheck": false
+                },
+                {
+                    "name": "ChangeMap",
+                    "type": "Button",
+                    "id": "3c6933b4-353e-4840-b50a-c24f8da624eb",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -296,6 +305,17 @@
                     "processors": "",
                     "groups": "",
                     "action": "Ability2",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "a92cc669-7c31-45eb-a81d-5e4a3861aa92",
+                    "path": "<Keyboard>/tab",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "ChangeMap",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

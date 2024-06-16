@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 9aae317c97d0a664c95bac1b450153f6
+guid: aacc7b3026f19334dbbb8683b7aefa38
 ScriptedImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -35,7 +35,7 @@ ScriptedImporter:
     spriteMeshType: 1
     alignment: 0
     spritePivot: {x: 0.5, y: 0.5}
-    spritePixelsToUnits: 64
+    spritePixelsToUnits: 32
     spriteBorder: {x: 0, y: 0, z: 0, w: 0}
     spriteGenerateFallbackPhysicsShape: 0
     generateCubemap: 6
@@ -95,7 +95,7 @@ ScriptedImporter:
     addSortingGroup: 1
     addShadowCasters: 0
   importFileNodeState: 1
-  platformSettingsDirtyTick: 638541746354498234
+  platformSettingsDirtyTick: 638541674897493658
   textureAssetName: 
   singleSpriteImportData:
   - name: 
@@ -119,18 +119,18 @@ ScriptedImporter:
     tessellationDetail: 0
     uvTransform: {x: 0, y: 0}
   animatedSpriteImportData:
-  - name: Rock2
+  - name: Cursor
     originalName: 
-    pivot: {x: 0.5, y: 0}
+    pivot: {x: 0.4666667, y: -0.5}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
       x: 4
       y: 4
-      width: 64
-      height: 64
-    spriteID: 5f27fe28197c92d479b567851811887c
+      width: 30
+      height: 32
+    spriteID: 8d3b1fba7f31a1a4fa74f7a049be296b
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -142,20 +142,20 @@ ScriptedImporter:
   spriteSheetImportData: []
   asepriteLayers:
   - layerIndex: 0
-    guid: 1883074383
-    name: Rock2
+    guid: -454137200
+    name: Cursor
     layerFlags: 0
     layerType: 0
     blendMode: 0
     cells:
-    - name: Rock2
+    - name: Cursor
       frameIndex: 0
       cellRect:
-        x: 0
-        y: 0
-        width: 64
-        height: 64
-      spriteId: 5f27fe28197c92d479b567851811887c
+        x: 18
+        y: 16
+        width: 30
+        height: 32
+      spriteId: 8d3b1fba7f31a1a4fa74f7a049be296b
     linkedCells: []
     parentIndex: -1
   platformSettings:

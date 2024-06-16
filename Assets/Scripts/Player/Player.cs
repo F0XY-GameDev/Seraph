@@ -49,6 +49,7 @@ public class Player : MonoBehaviour
 
     [Header("Prefabs")]
     public GameObject abilityBulletPrefab;
+    public GameObject abilityBulletPrefabSlow;
 
 
     private void Awake()
@@ -89,6 +90,7 @@ public class Player : MonoBehaviour
         if (isChannelingAbility2)
         {
             ability2ChannelSpriteTimer--;
+            ability2ChannelTimer++;
             if (ability2ChannelSpriteTimer <= 0)
             {
                 ToggleSpriteColor();
@@ -179,6 +181,7 @@ public class Player : MonoBehaviour
     {
         //channeled ability
         //release channeled ability
+        ability2ChannelTimer = 0;
         moveSpeed = regularMoveSpeed;
         foreach (Vector2 direction in ability2Directions)
         {
@@ -193,6 +196,18 @@ public class Player : MonoBehaviour
     }
     private void OnAbility2Canceled(InputAction.CallbackContext value)
     {
+        if (ability2ChannelTimer >= (ability2ChargeTime * 50 / 2))
+        {
+            foreach (Vector2 direction in ability2Directions)
+            {
+                GameObject temporaryBullet = abilityBulletPrefabSlow;
+                Bullet tempBullet = temporaryBullet.GetComponent<Bullet>();
+                tempBullet.SetDirection(direction);
+                //tempBullet.isAbilityBullet = true;
+                Instantiate(temporaryBullet, this.transform.position, Quaternion.identity).GetComponent<Bullet>();
+            }
+        }
+        ability2ChannelTimer = 0;
         moveSpeed = regularMoveSpeed;
         //release channeled ability
         isChannelingAbility2 = false;

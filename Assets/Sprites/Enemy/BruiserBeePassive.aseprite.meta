@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 9aae317c97d0a664c95bac1b450153f6
+guid: 8b8bf658efecd294c8e8ed65d7a0344f
 ScriptedImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -95,7 +95,7 @@ ScriptedImporter:
     addSortingGroup: 1
     addShadowCasters: 0
   importFileNodeState: 1
-  platformSettingsDirtyTick: 638541746354498234
+  platformSettingsDirtyTick: 638541745365625935
   textureAssetName: 
   singleSpriteImportData:
   - name: 
@@ -119,18 +119,18 @@ ScriptedImporter:
     tessellationDetail: 0
     uvTransform: {x: 0, y: 0}
   animatedSpriteImportData:
-  - name: Rock2
+  - name: BruiserBeePassive_Frame_0
     originalName: 
-    pivot: {x: 0.5, y: 0}
+    pivot: {x: 0.49122807, y: -0.16666667}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
       x: 4
       y: 4
-      width: 64
-      height: 64
-    spriteID: 5f27fe28197c92d479b567851811887c
+      width: 57
+      height: 48
+    spriteID: 7432d3290c22f824a9dd0ee0865bba85
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -139,23 +139,163 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 4, y: 4}
+  - name: BruiserBeePassive_Frame_1
+    originalName: 
+    pivot: {x: 0.49122807, y: -0.19148935}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 69
+      y: 4
+      width: 57
+      height: 47
+    spriteID: b75f4a6568acf3a48801c8f22f7ef5c4
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 69, y: 4}
+  - name: BruiserBeePassive_Frame_2
+    originalName: 
+    pivot: {x: 0.49122807, y: -0.22222222}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 60
+      width: 57
+      height: 45
+    spriteID: 9ddf3cfecb2caa34bab9d8a5edcc4a2a
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 60}
+  - name: BruiserBeePassive_Frame_3
+    originalName: 
+    pivot: {x: 0.49122807, y: -0.25}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 134
+      y: 60
+      width: 57
+      height: 44
+    spriteID: 4ca963000ee3d45479a264a5d025bbef
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 134, y: 60}
+  - name: BruiserBeePassive_Frame_4
+    originalName: 
+    pivot: {x: 0.49122807, y: -0.22222222}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 69
+      y: 60
+      width: 57
+      height: 45
+    spriteID: 80b93b88d80a98e41bf8fd8db65e3038
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 69, y: 60}
+  - name: BruiserBeePassive_Frame_5
+    originalName: 
+    pivot: {x: 0.49122807, y: -0.19148935}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 134
+      y: 4
+      width: 57
+      height: 47
+    spriteID: 301e9b40d514e384b82d14df01d48510
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 134, y: 4}
   spriteSheetImportData: []
   asepriteLayers:
   - layerIndex: 0
-    guid: 1883074383
-    name: Rock2
+    guid: -1697870627
+    name: BruiserBeePassive
     layerFlags: 0
     layerType: 0
     blendMode: 0
     cells:
-    - name: Rock2
+    - name: BruiserBeePassive_Frame_0
       frameIndex: 0
       cellRect:
-        x: 0
-        y: 0
-        width: 64
-        height: 64
-      spriteId: 5f27fe28197c92d479b567851811887c
+        x: 4
+        y: 8
+        width: 57
+        height: 48
+      spriteId: 7432d3290c22f824a9dd0ee0865bba85
+    - name: BruiserBeePassive_Frame_1
+      frameIndex: 1
+      cellRect:
+        x: 4
+        y: 9
+        width: 57
+        height: 47
+      spriteId: b75f4a6568acf3a48801c8f22f7ef5c4
+    - name: BruiserBeePassive_Frame_2
+      frameIndex: 2
+      cellRect:
+        x: 4
+        y: 10
+        width: 57
+        height: 45
+      spriteId: 9ddf3cfecb2caa34bab9d8a5edcc4a2a
+    - name: BruiserBeePassive_Frame_3
+      frameIndex: 3
+      cellRect:
+        x: 4
+        y: 11
+        width: 57
+        height: 44
+      spriteId: 4ca963000ee3d45479a264a5d025bbef
+    - name: BruiserBeePassive_Frame_4
+      frameIndex: 4
+      cellRect:
+        x: 4
+        y: 10
+        width: 57
+        height: 45
+      spriteId: 80b93b88d80a98e41bf8fd8db65e3038
+    - name: BruiserBeePassive_Frame_5
+      frameIndex: 5
+      cellRect:
+        x: 4
+        y: 9
+        width: 57
+        height: 47
+      spriteId: 301e9b40d514e384b82d14df01d48510
     linkedCells: []
     parentIndex: -1
   platformSettings:

@@ -35,7 +35,7 @@ ScriptedImporter:
     spriteMeshType: 1
     alignment: 0
     spritePivot: {x: 0.5, y: 0.5}
-    spritePixelsToUnits: 16
+    spritePixelsToUnits: 64
     spriteBorder: {x: 0, y: 0, z: 0, w: 0}
     spriteGenerateFallbackPhysicsShape: 0
     generateCubemap: 6
@@ -95,7 +95,7 @@ ScriptedImporter:
     addSortingGroup: 1
     addShadowCasters: 0
   importFileNodeState: 1
-  platformSettingsDirtyTick: 638449042064981691
+  platformSettingsDirtyTick: 638541745766141306
   textureAssetName: 
   singleSpriteImportData:
   - name: 
@@ -126,10 +126,10 @@ ScriptedImporter:
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 4
-      y: 70
-      width: 10
-      height: 8
+      x: 52
+      y: 312
+      width: 40
+      height: 32
     spriteID: 1bf2238405fb575499a8815ca2f58a31
     spriteBone: []
     spriteOutline: []
@@ -138,7 +138,7 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 4, y: 70}
+    uvTransform: {x: 52, y: 312}
   - name: SlimeWalkRight_Frame_1
     originalName: 
     pivot: {x: 0.5, y: 0}
@@ -146,10 +146,10 @@ ScriptedImporter:
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 76
-      y: 38
-      width: 12
-      height: 7
+      x: 100
+      y: 4
+      width: 48
+      height: 28
     spriteID: 2f7991cb8573b2b4eae1704f4620bc09
     spriteBone: []
     spriteOutline: []
@@ -158,7 +158,7 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 76, y: 38}
+    uvTransform: {x: 100, y: 4}
   - name: SlimeWalkRight_Frame_2
     originalName: 
     pivot: {x: 0.5, y: 0}
@@ -166,10 +166,10 @@ ScriptedImporter:
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 22
-      y: 70
-      width: 10
-      height: 8
+      x: 52
+      y: 352
+      width: 40
+      height: 32
     spriteID: 72102bb1d4ffbd94b9fded8eeecd9dbc
     spriteBone: []
     spriteOutline: []
@@ -178,7 +178,7 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 22, y: 70}
+    uvTransform: {x: 52, y: 352}
   - name: SlimeWalkRight_Frame_3
     originalName: 
     pivot: {x: 0.5, y: 0}
@@ -188,8 +188,8 @@ ScriptedImporter:
       serializedVersion: 2
       x: 4
       y: 4
-      width: 10
-      height: 9
+      width: 40
+      height: 36
     spriteID: 34cbe442cdd2cf741aae2ec92376a0b2
     spriteBone: []
     spriteOutline: []
@@ -206,10 +206,10 @@ ScriptedImporter:
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 22
-      y: 4
-      width: 10
-      height: 9
+      x: 4
+      y: 48
+      width: 40
+      height: 36
     spriteID: ed69f230c8c651c4baf611b8e772b9ba
     spriteBone: []
     spriteOutline: []
@@ -218,7 +218,7 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 22, y: 4}
+    uvTransform: {x: 4, y: 48}
   - name: SlimeWalkRight_Frame_5
     originalName: 
     pivot: {x: 0.5, y: 0}
@@ -226,10 +226,10 @@ ScriptedImporter:
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 40
-      y: 4
-      width: 10
-      height: 9
+      x: 4
+      y: 92
+      width: 40
+      height: 36
     spriteID: cdf768acba2facf4fb1b7d3a1bf691b2
     spriteBone: []
     spriteOutline: []
@@ -238,7 +238,7 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 40, y: 4}
+    uvTransform: {x: 4, y: 92}
   - name: SlimeWalkRight_Frame_6
     originalName: 
     pivot: {x: 0.5, y: 0}
@@ -246,10 +246,10 @@ ScriptedImporter:
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 40
-      y: 70
-      width: 10
-      height: 8
+      x: 52
+      y: 392
+      width: 40
+      height: 32
     spriteID: 135de8491e0630a42b8416633aa26b35
     spriteBone: []
     spriteOutline: []
@@ -258,7 +258,7 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 40, y: 70}
+    uvTransform: {x: 52, y: 392}
   - name: SlimeWalkRight_Frame_7
     originalName: 
     pivot: {x: 0.5, y: 0}
@@ -266,10 +266,10 @@ ScriptedImporter:
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 96
-      y: 38
-      width: 12
-      height: 7
+      x: 100
+      y: 40
+      width: 48
+      height: 28
     spriteID: e26d91a7e40a4cc47909b07b96575c51
     spriteBone: []
     spriteOutline: []
@@ -278,7 +278,7 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 96, y: 38}
+    uvTransform: {x: 100, y: 40}
   - name: SlimeWalkRight_Frame_8
     originalName: 
     pivot: {x: 0.5, y: 0}
@@ -286,10 +286,10 @@ ScriptedImporter:
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 58
-      y: 70
-      width: 10
-      height: 8
+      x: 52
+      y: 432
+      width: 40
+      height: 32
     spriteID: 59f461a3e129f704388b252bea006e10
     spriteBone: []
     spriteOutline: []
@@ -298,7 +298,7 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 58, y: 70}
+    uvTransform: {x: 52, y: 432}
   - name: SlimeWalkRight_Frame_9
     originalName: 
     pivot: {x: 0.5, y: 0}
@@ -306,10 +306,10 @@ ScriptedImporter:
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 58
-      y: 4
-      width: 10
-      height: 9
+      x: 4
+      y: 136
+      width: 40
+      height: 36
     spriteID: 7bc4dcf5b1b897e4083257127f5274b4
     spriteBone: []
     spriteOutline: []
@@ -318,7 +318,7 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 58, y: 4}
+    uvTransform: {x: 4, y: 136}
   - name: SlimeWalkRight_Frame_10
     originalName: 
     pivot: {x: 0.5, y: 0}
@@ -326,10 +326,10 @@ ScriptedImporter:
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 76
-      y: 4
-      width: 10
-      height: 9
+      x: 4
+      y: 180
+      width: 40
+      height: 36
     spriteID: 1b7e5a4cedbcea14cacc9fbf6cbc21c2
     spriteBone: []
     spriteOutline: []
@@ -338,7 +338,7 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 76, y: 4}
+    uvTransform: {x: 4, y: 180}
   - name: SlimeWalkRight_Frame_11
     originalName: 
     pivot: {x: 0.5, y: 0}
@@ -346,10 +346,10 @@ ScriptedImporter:
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 94
-      y: 4
-      width: 10
-      height: 9
+      x: 4
+      y: 224
+      width: 40
+      height: 36
     spriteID: 1dc1a08be9105434ea64ea828891a5ce
     spriteBone: []
     spriteOutline: []
@@ -358,7 +358,7 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 94, y: 4}
+    uvTransform: {x: 4, y: 224}
   - name: SlimeWalkRight_Frame_12
     originalName: 
     pivot: {x: 0.5, y: 0}
@@ -366,10 +366,10 @@ ScriptedImporter:
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 76
-      y: 70
-      width: 10
-      height: 8
+      x: 52
+      y: 472
+      width: 40
+      height: 32
     spriteID: 85e4a7de891ecb54eb56ecb31385f887
     spriteBone: []
     spriteOutline: []
@@ -378,7 +378,7 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 76, y: 70}
+    uvTransform: {x: 52, y: 472}
   - name: SlimeWalkRight_Frame_13
     originalName: 
     pivot: {x: 0.5, y: 0}
@@ -386,10 +386,10 @@ ScriptedImporter:
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 4
-      y: 55
-      width: 12
-      height: 7
+      x: 100
+      y: 76
+      width: 48
+      height: 28
     spriteID: b728b44063c00d5429d1fa2c2e466bd0
     spriteBone: []
     spriteOutline: []
@@ -398,7 +398,7 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 4, y: 55}
+    uvTransform: {x: 100, y: 76}
   - name: SlimeWalkRight_Frame_14
     originalName: 
     pivot: {x: 0.5, y: 0}
@@ -406,10 +406,10 @@ ScriptedImporter:
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 94
-      y: 70
-      width: 10
-      height: 8
+      x: 100
+      y: 220
+      width: 40
+      height: 32
     spriteID: d34e03a8c95b92e4f8b1887a13715938
     spriteBone: []
     spriteOutline: []
@@ -418,7 +418,7 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 94, y: 70}
+    uvTransform: {x: 100, y: 220}
   - name: SlimeWalkRight_Frame_15
     originalName: 
     pivot: {x: 0.5, y: 0}
@@ -426,10 +426,10 @@ ScriptedImporter:
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 112
-      y: 4
-      width: 10
-      height: 9
+      x: 4
+      y: 268
+      width: 40
+      height: 36
     spriteID: 9af1055b77105f84bb9960cc9401617d
     spriteBone: []
     spriteOutline: []
@@ -438,7 +438,7 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 112, y: 4}
+    uvTransform: {x: 4, y: 268}
   - name: SlimeWalkRight_Frame_16
     originalName: 
     pivot: {x: 0.5, y: 0}
@@ -447,9 +447,9 @@ ScriptedImporter:
     rect:
       serializedVersion: 2
       x: 4
-      y: 21
-      width: 10
-      height: 9
+      y: 312
+      width: 40
+      height: 36
     spriteID: bbfe744767d54ac46acc9f4a1d18a0a4
     spriteBone: []
     spriteOutline: []
@@ -458,7 +458,7 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 4, y: 21}
+    uvTransform: {x: 4, y: 312}
   - name: SlimeWalkRight_Frame_17
     originalName: 
     pivot: {x: 0.5, y: 0}
@@ -466,10 +466,10 @@ ScriptedImporter:
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 22
-      y: 21
-      width: 10
-      height: 9
+      x: 4
+      y: 356
+      width: 40
+      height: 36
     spriteID: 3712c3f7de3441847b1b8667750e98b1
     spriteBone: []
     spriteOutline: []
@@ -478,7 +478,7 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 22, y: 21}
+    uvTransform: {x: 4, y: 356}
   - name: SlimeWalkRight_Frame_18
     originalName: 
     pivot: {x: 0.5, y: 0}
@@ -486,10 +486,10 @@ ScriptedImporter:
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 112
-      y: 70
-      width: 10
-      height: 8
+      x: 100
+      y: 260
+      width: 40
+      height: 32
     spriteID: 0dc9ba0e2c611274bb252798f8764597
     spriteBone: []
     spriteOutline: []
@@ -498,7 +498,7 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 112, y: 70}
+    uvTransform: {x: 100, y: 260}
   - name: SlimeWalkRight_Frame_19
     originalName: 
     pivot: {x: 0.5, y: 0}
@@ -506,10 +506,10 @@ ScriptedImporter:
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 24
-      y: 55
-      width: 12
-      height: 7
+      x: 100
+      y: 112
+      width: 48
+      height: 28
     spriteID: 2bf3249f3b9588b4197d7a4c60551fdf
     spriteBone: []
     spriteOutline: []
@@ -518,7 +518,7 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 24, y: 55}
+    uvTransform: {x: 100, y: 112}
   - name: SlimeWalkRight_Frame_20
     originalName: 
     pivot: {x: 0.5, y: 0}
@@ -526,10 +526,10 @@ ScriptedImporter:
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 4
-      y: 86
-      width: 10
-      height: 8
+      x: 100
+      y: 300
+      width: 40
+      height: 32
     spriteID: f35fb545d4851164ea5491294b633daf
     spriteBone: []
     spriteOutline: []
@@ -538,7 +538,7 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 4, y: 86}
+    uvTransform: {x: 100, y: 300}
   - name: SlimeWalkRight_Frame_21
     originalName: 
     pivot: {x: 0.5, y: 0}
@@ -546,10 +546,10 @@ ScriptedImporter:
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 40
-      y: 21
-      width: 10
-      height: 9
+      x: 4
+      y: 400
+      width: 40
+      height: 36
     spriteID: 00be446fa7ebb314dac49c2f1f93ab9d
     spriteBone: []
     spriteOutline: []
@@ -558,7 +558,7 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 40, y: 21}
+    uvTransform: {x: 4, y: 400}
   - name: SlimeWalkRight_Frame_22
     originalName: 
     pivot: {x: 0.5, y: 0}
@@ -566,10 +566,10 @@ ScriptedImporter:
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 58
-      y: 21
-      width: 10
-      height: 9
+      x: 4
+      y: 444
+      width: 40
+      height: 36
     spriteID: 14e30b740f178a54abb6bf36f77420f4
     spriteBone: []
     spriteOutline: []
@@ -578,7 +578,7 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 58, y: 21}
+    uvTransform: {x: 4, y: 444}
   - name: SlimeWalkRight_Frame_23
     originalName: 
     pivot: {x: 0.5, y: 0}
@@ -586,10 +586,10 @@ ScriptedImporter:
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 76
-      y: 21
-      width: 10
-      height: 9
+      x: 52
+      y: 4
+      width: 40
+      height: 36
     spriteID: 89cc854bf6fe16841a25f14627a00627
     spriteBone: []
     spriteOutline: []
@@ -598,7 +598,7 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 76, y: 21}
+    uvTransform: {x: 52, y: 4}
   - name: SlimeWalkRight_Frame_24
     originalName: 
     pivot: {x: 0.5, y: 0}
@@ -606,10 +606,10 @@ ScriptedImporter:
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 22
-      y: 86
-      width: 10
-      height: 8
+      x: 100
+      y: 340
+      width: 40
+      height: 32
     spriteID: cc5dd3231f85c0f4d8a20047a0892194
     spriteBone: []
     spriteOutline: []
@@ -618,7 +618,7 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 22, y: 86}
+    uvTransform: {x: 100, y: 340}
   - name: SlimeWalkRight_Frame_25
     originalName: 
     pivot: {x: 0.5, y: 0}
@@ -626,10 +626,10 @@ ScriptedImporter:
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 44
-      y: 55
-      width: 12
-      height: 7
+      x: 100
+      y: 148
+      width: 48
+      height: 28
     spriteID: 33ade2e357dc5f64f938f14e2bed1d6f
     spriteBone: []
     spriteOutline: []
@@ -638,7 +638,7 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 44, y: 55}
+    uvTransform: {x: 100, y: 148}
   - name: SlimeWalkRight_Frame_26
     originalName: 
     pivot: {x: 0.5, y: 0}
@@ -646,10 +646,10 @@ ScriptedImporter:
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 40
-      y: 86
-      width: 10
-      height: 8
+      x: 100
+      y: 380
+      width: 40
+      height: 32
     spriteID: 1227b464082cd754893369f4db8275c4
     spriteBone: []
     spriteOutline: []
@@ -658,7 +658,7 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 40, y: 86}
+    uvTransform: {x: 100, y: 380}
   - name: SlimeWalkRight_Frame_27
     originalName: 
     pivot: {x: 0.5, y: 0}
@@ -666,10 +666,10 @@ ScriptedImporter:
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 94
-      y: 21
-      width: 10
-      height: 9
+      x: 52
+      y: 48
+      width: 40
+      height: 36
     spriteID: ba06cb0fe2b8ebc4293792394181da52
     spriteBone: []
     spriteOutline: []
@@ -678,7 +678,7 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 94, y: 21}
+    uvTransform: {x: 52, y: 48}
   - name: SlimeWalkRight_Frame_28
     originalName: 
     pivot: {x: 0.5, y: 0}
@@ -686,10 +686,10 @@ ScriptedImporter:
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 112
-      y: 21
-      width: 10
-      height: 9
+      x: 52
+      y: 92
+      width: 40
+      height: 36
     spriteID: a70b834bea81db3468fea6823e5e3948
     spriteBone: []
     spriteOutline: []
@@ -698,7 +698,7 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 112, y: 21}
+    uvTransform: {x: 52, y: 92}
   - name: SlimeWalkRight_Frame_29
     originalName: 
     pivot: {x: 0.5, y: 0}
@@ -706,10 +706,10 @@ ScriptedImporter:
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 4
-      y: 38
-      width: 10
-      height: 9
+      x: 52
+      y: 136
+      width: 40
+      height: 36
     spriteID: 2f8b8cb58d0fc0547bbba0d604591e83
     spriteBone: []
     spriteOutline: []
@@ -718,7 +718,7 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 4, y: 38}
+    uvTransform: {x: 52, y: 136}
   - name: SlimeWalkRight_Frame_30
     originalName: 
     pivot: {x: 0.5, y: 0}
@@ -726,10 +726,10 @@ ScriptedImporter:
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 58
-      y: 86
-      width: 10
-      height: 8
+      x: 100
+      y: 420
+      width: 40
+      height: 32
     spriteID: 32208bcfe26fa4f4c9f99e547653be61
     spriteBone: []
     spriteOutline: []
@@ -738,7 +738,7 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 58, y: 86}
+    uvTransform: {x: 100, y: 420}
   - name: SlimeWalkRight_Frame_31
     originalName: 
     pivot: {x: 0.5, y: 0}
@@ -746,10 +746,10 @@ ScriptedImporter:
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 64
-      y: 55
-      width: 12
-      height: 7
+      x: 100
+      y: 184
+      width: 48
+      height: 28
     spriteID: f7f3710e6f558954299835068510cb5b
     spriteBone: []
     spriteOutline: []
@@ -758,7 +758,7 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 64, y: 55}
+    uvTransform: {x: 100, y: 184}
   - name: SlimeWalkRight_Frame_32
     originalName: 
     pivot: {x: 0.5, y: 0}
@@ -766,10 +766,10 @@ ScriptedImporter:
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 76
-      y: 86
-      width: 10
-      height: 8
+      x: 100
+      y: 460
+      width: 40
+      height: 32
     spriteID: 59cdf3ff5e7f715499e30f90a7fd422e
     spriteBone: []
     spriteOutline: []
@@ -778,7 +778,7 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 76, y: 86}
+    uvTransform: {x: 100, y: 460}
   - name: SlimeWalkRight_Frame_33
     originalName: 
     pivot: {x: 0.5, y: 0}
@@ -786,10 +786,10 @@ ScriptedImporter:
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 22
-      y: 38
-      width: 10
-      height: 9
+      x: 52
+      y: 180
+      width: 40
+      height: 36
     spriteID: 9decefdec23581e48bcac967940c54ea
     spriteBone: []
     spriteOutline: []
@@ -798,7 +798,7 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 22, y: 38}
+    uvTransform: {x: 52, y: 180}
   - name: SlimeWalkRight_Frame_34
     originalName: 
     pivot: {x: 0.5, y: 0}
@@ -806,10 +806,10 @@ ScriptedImporter:
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 40
-      y: 38
-      width: 10
-      height: 9
+      x: 52
+      y: 224
+      width: 40
+      height: 36
     spriteID: 41031b4696b0ab24e80334412f0e9c16
     spriteBone: []
     spriteOutline: []
@@ -818,7 +818,7 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 40, y: 38}
+    uvTransform: {x: 52, y: 224}
   - name: SlimeWalkRight_Frame_35
     originalName: 
     pivot: {x: 0.5, y: 0}
@@ -826,10 +826,10 @@ ScriptedImporter:
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 58
-      y: 38
-      width: 10
-      height: 9
+      x: 52
+      y: 268
+      width: 40
+      height: 36
     spriteID: eb0bd77009f2a0e479923d3a7b2c77cb
     spriteBone: []
     spriteOutline: []
@@ -838,7 +838,7 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 58, y: 38}
+    uvTransform: {x: 52, y: 268}
   spriteSheetImportData: []
   asepriteLayers:
   - layerIndex: 0
@@ -851,290 +851,290 @@ ScriptedImporter:
     - name: SlimeWalkRight_Frame_0
       frameIndex: 0
       cellRect:
-        x: 3
+        x: 12
         y: 0
-        width: 10
-        height: 8
+        width: 40
+        height: 32
       spriteId: 1bf2238405fb575499a8815ca2f58a31
     - name: SlimeWalkRight_Frame_1
       frameIndex: 1
       cellRect:
-        x: 2
+        x: 8
         y: 0
-        width: 12
-        height: 7
+        width: 48
+        height: 28
       spriteId: 2f7991cb8573b2b4eae1704f4620bc09
     - name: SlimeWalkRight_Frame_2
       frameIndex: 2
       cellRect:
-        x: 3
+        x: 12
         y: 0
-        width: 10
-        height: 8
+        width: 40
+        height: 32
       spriteId: 72102bb1d4ffbd94b9fded8eeecd9dbc
     - name: SlimeWalkRight_Frame_3
       frameIndex: 3
       cellRect:
-        x: 3
+        x: 12
         y: 0
-        width: 10
-        height: 9
+        width: 40
+        height: 36
       spriteId: 34cbe442cdd2cf741aae2ec92376a0b2
     - name: SlimeWalkRight_Frame_4
       frameIndex: 4
       cellRect:
-        x: 3
+        x: 12
         y: 0
-        width: 10
-        height: 9
+        width: 40
+        height: 36
       spriteId: ed69f230c8c651c4baf611b8e772b9ba
     - name: SlimeWalkRight_Frame_5
       frameIndex: 5
       cellRect:
-        x: 3
+        x: 12
         y: 0
-        width: 10
-        height: 9
+        width: 40
+        height: 36
       spriteId: cdf768acba2facf4fb1b7d3a1bf691b2
     - name: SlimeWalkRight_Frame_6
       frameIndex: 6
       cellRect:
-        x: 3
+        x: 12
         y: 0
-        width: 10
-        height: 8
+        width: 40
+        height: 32
       spriteId: 135de8491e0630a42b8416633aa26b35
     - name: SlimeWalkRight_Frame_7
       frameIndex: 7
       cellRect:
-        x: 2
+        x: 8
         y: 0
-        width: 12
-        height: 7
+        width: 48
+        height: 28
       spriteId: e26d91a7e40a4cc47909b07b96575c51
     - name: SlimeWalkRight_Frame_8
       frameIndex: 8
       cellRect:
-        x: 3
+        x: 12
         y: 0
-        width: 10
-        height: 8
+        width: 40
+        height: 32
       spriteId: 59f461a3e129f704388b252bea006e10
     - name: SlimeWalkRight_Frame_9
       frameIndex: 9
       cellRect:
-        x: 3
+        x: 12
         y: 0
-        width: 10
-        height: 9
+        width: 40
+        height: 36
       spriteId: 7bc4dcf5b1b897e4083257127f5274b4
     - name: SlimeWalkRight_Frame_10
       frameIndex: 10
       cellRect:
-        x: 3
+        x: 12
         y: 0
-        width: 10
-        height: 9
+        width: 40
+        height: 36
       spriteId: 1b7e5a4cedbcea14cacc9fbf6cbc21c2
     - name: SlimeWalkRight_Frame_11
       frameIndex: 11
       cellRect:
-        x: 3
+        x: 12
         y: 0
-        width: 10
-        height: 9
+        width: 40
+        height: 36
       spriteId: 1dc1a08be9105434ea64ea828891a5ce
     - name: SlimeWalkRight_Frame_12
       frameIndex: 12
       cellRect:
-        x: 3
+        x: 12
         y: 0
-        width: 10
-        height: 8
+        width: 40
+        height: 32
       spriteId: 85e4a7de891ecb54eb56ecb31385f887
     - name: SlimeWalkRight_Frame_13
       frameIndex: 13
       cellRect:
-        x: 2
+        x: 8
         y: 0
-        width: 12
-        height: 7
+        width: 48
+        height: 28
       spriteId: b728b44063c00d5429d1fa2c2e466bd0
     - name: SlimeWalkRight_Frame_14
       frameIndex: 14
       cellRect:
-        x: 3
+        x: 12
         y: 0
-        width: 10
-        height: 8
+        width: 40
+        height: 32
       spriteId: d34e03a8c95b92e4f8b1887a13715938
     - name: SlimeWalkRight_Frame_15
       frameIndex: 15
       cellRect:
-        x: 3
+        x: 12
         y: 0
-        width: 10
-        height: 9
+        width: 40
+        height: 36
       spriteId: 9af1055b77105f84bb9960cc9401617d
     - name: SlimeWalkRight_Frame_16
       frameIndex: 16
       cellRect:
-        x: 3
+        x: 12
         y: 0
-        width: 10
-        height: 9
+        width: 40
+        height: 36
       spriteId: bbfe744767d54ac46acc9f4a1d18a0a4
     - name: SlimeWalkRight_Frame_17
       frameIndex: 17
       cellRect:
-        x: 3
+        x: 12
         y: 0
-        width: 10
-        height: 9
+        width: 40
+        height: 36
       spriteId: 3712c3f7de3441847b1b8667750e98b1
     - name: SlimeWalkRight_Frame_18
       frameIndex: 18
       cellRect:
-        x: 3
+        x: 12
         y: 0
-        width: 10
-        height: 8
+        width: 40
+        height: 32
       spriteId: 0dc9ba0e2c611274bb252798f8764597
     - name: SlimeWalkRight_Frame_19
       frameIndex: 19
       cellRect:
-        x: 2
+        x: 8
         y: 0
-        width: 12
-        height: 7
+        width: 48
+        height: 28
       spriteId: 2bf3249f3b9588b4197d7a4c60551fdf
     - name: SlimeWalkRight_Frame_20
       frameIndex: 20
       cellRect:
-        x: 3
+        x: 12
         y: 0
-        width: 10
-        height: 8
+        width: 40
+        height: 32
       spriteId: f35fb545d4851164ea5491294b633daf
     - name: SlimeWalkRight_Frame_21
       frameIndex: 21
       cellRect:
-        x: 3
+        x: 12
         y: 0
-        width: 10
-        height: 9
+        width: 40
+        height: 36
       spriteId: 00be446fa7ebb314dac49c2f1f93ab9d
     - name: SlimeWalkRight_Frame_22
       frameIndex: 22
       cellRect:
-        x: 3
+        x: 12
         y: 0
-        width: 10
-        height: 9
+        width: 40
+        height: 36
       spriteId: 14e30b740f178a54abb6bf36f77420f4
     - name: SlimeWalkRight_Frame_23
       frameIndex: 23
       cellRect:
-        x: 3
+        x: 12
         y: 0
-        width: 10
-        height: 9
+        width: 40
+        height: 36
       spriteId: 89cc854bf6fe16841a25f14627a00627
     - name: SlimeWalkRight_Frame_24
       frameIndex: 24
       cellRect:
-        x: 3
+        x: 12
         y: 0
-        width: 10
-        height: 8
+        width: 40
+        height: 32
       spriteId: cc5dd3231f85c0f4d8a20047a0892194
     - name: SlimeWalkRight_Frame_25
       frameIndex: 25
       cellRect:
-        x: 2
+        x: 8
         y: 0
-        width: 12
-        height: 7
+        width: 48
+        height: 28
       spriteId: 33ade2e357dc5f64f938f14e2bed1d6f
     - name: SlimeWalkRight_Frame_26
       frameIndex: 26
       cellRect:
-        x: 3
+        x: 12
         y: 0
-        width: 10
-        height: 8
+        width: 40
+        height: 32
       spriteId: 1227b464082cd754893369f4db8275c4
     - name: SlimeWalkRight_Frame_27
       frameIndex: 27
       cellRect:
-        x: 3
+        x: 12
         y: 0
-        width: 10
-        height: 9
+        width: 40
+        height: 36
       spriteId: ba06cb0fe2b8ebc4293792394181da52
     - name: SlimeWalkRight_Frame_28
       frameIndex: 28
       cellRect:
-        x: 3
+        x: 12
         y: 0
-        width: 10
-        height: 9
+        width: 40
+        height: 36
       spriteId: a70b834bea81db3468fea6823e5e3948
     - name: SlimeWalkRight_Frame_29
       frameIndex: 29
       cellRect:
-        x: 3
+        x: 12
         y: 0
-        width: 10
-        height: 9
+        width: 40
+        height: 36
       spriteId: 2f8b8cb58d0fc0547bbba0d604591e83
     - name: SlimeWalkRight_Frame_30
       frameIndex: 30
       cellRect:
-        x: 3
+        x: 12
         y: 0
-        width: 10
-        height: 8
+        width: 40
+        height: 32
       spriteId: 32208bcfe26fa4f4c9f99e547653be61
     - name: SlimeWalkRight_Frame_31
       frameIndex: 31
       cellRect:
-        x: 2
+        x: 8
         y: 0
-        width: 12
-        height: 7
+        width: 48
+        height: 28
       spriteId: f7f3710e6f558954299835068510cb5b
     - name: SlimeWalkRight_Frame_32
       frameIndex: 32
       cellRect:
-        x: 3
+        x: 12
         y: 0
-        width: 10
-        height: 8
+        width: 40
+        height: 32
       spriteId: 59cdf3ff5e7f715499e30f90a7fd422e
     - name: SlimeWalkRight_Frame_33
       frameIndex: 33
       cellRect:
-        x: 3
+        x: 12
         y: 0
-        width: 10
-        height: 9
+        width: 40
+        height: 36
       spriteId: 9decefdec23581e48bcac967940c54ea
     - name: SlimeWalkRight_Frame_34
       frameIndex: 34
       cellRect:
-        x: 3
+        x: 12
         y: 0
-        width: 10
-        height: 9
+        width: 40
+        height: 36
       spriteId: 41031b4696b0ab24e80334412f0e9c16
     - name: SlimeWalkRight_Frame_35
       frameIndex: 35
       cellRect:
-        x: 3
+        x: 12
         y: 0
-        width: 10
-        height: 9
+        width: 40
+        height: 36
       spriteId: eb0bd77009f2a0e479923d3a7b2c77cb
     linkedCells: []
     parentIndex: -1
@@ -1225,4 +1225,4 @@ ScriptedImporter:
     androidETC2FallbackOverride: 0
   secondarySpriteTextures: []
   spritePackingTag: 
-  canvasSize: {x: 16, y: 16}
+  canvasSize: {x: 64, y: 64}

@@ -98,6 +98,15 @@ public partial class @CustomInput: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": ""Hold(duration=3,pressPoint=0.2)"",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""ChangeMap"",
+                    ""type"": ""Button"",
+                    ""id"": ""3c6933b4-353e-4840-b50a-c24f8da624eb"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -320,6 +329,17 @@ public partial class @CustomInput: IInputActionCollection2, IDisposable
                     ""action"": ""Ability2"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""a92cc669-7c31-45eb-a81d-5e4a3861aa92"",
+                    ""path"": ""<Keyboard>/tab"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""ChangeMap"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -336,6 +356,7 @@ public partial class @CustomInput: IInputActionCollection2, IDisposable
         m_Player_ToggleMap = m_Player.FindAction("ToggleMap", throwIfNotFound: true);
         m_Player_Ability1 = m_Player.FindAction("Ability1", throwIfNotFound: true);
         m_Player_Ability2 = m_Player.FindAction("Ability2", throwIfNotFound: true);
+        m_Player_ChangeMap = m_Player.FindAction("ChangeMap", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -405,6 +426,7 @@ public partial class @CustomInput: IInputActionCollection2, IDisposable
     private readonly InputAction m_Player_ToggleMap;
     private readonly InputAction m_Player_Ability1;
     private readonly InputAction m_Player_Ability2;
+    private readonly InputAction m_Player_ChangeMap;
     public struct PlayerActions
     {
         private @CustomInput m_Wrapper;
@@ -417,6 +439,7 @@ public partial class @CustomInput: IInputActionCollection2, IDisposable
         public InputAction @ToggleMap => m_Wrapper.m_Player_ToggleMap;
         public InputAction @Ability1 => m_Wrapper.m_Player_Ability1;
         public InputAction @Ability2 => m_Wrapper.m_Player_Ability2;
+        public InputAction @ChangeMap => m_Wrapper.m_Player_ChangeMap;
         public InputActionMap Get() { return m_Wrapper.m_Player; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -450,6 +473,9 @@ public partial class @CustomInput: IInputActionCollection2, IDisposable
             @Ability2.started += instance.OnAbility2;
             @Ability2.performed += instance.OnAbility2;
             @Ability2.canceled += instance.OnAbility2;
+            @ChangeMap.started += instance.OnChangeMap;
+            @ChangeMap.performed += instance.OnChangeMap;
+            @ChangeMap.canceled += instance.OnChangeMap;
         }
 
         private void UnregisterCallbacks(IPlayerActions instance)
@@ -478,6 +504,9 @@ public partial class @CustomInput: IInputActionCollection2, IDisposable
             @Ability2.started -= instance.OnAbility2;
             @Ability2.performed -= instance.OnAbility2;
             @Ability2.canceled -= instance.OnAbility2;
+            @ChangeMap.started -= instance.OnChangeMap;
+            @ChangeMap.performed -= instance.OnChangeMap;
+            @ChangeMap.canceled -= instance.OnChangeMap;
         }
 
         public void RemoveCallbacks(IPlayerActions instance)
@@ -505,5 +534,6 @@ public partial class @CustomInput: IInputActionCollection2, IDisposable
         void OnToggleMap(InputAction.CallbackContext context);
         void OnAbility1(InputAction.CallbackContext context);
         void OnAbility2(InputAction.CallbackContext context);
+        void OnChangeMap(InputAction.CallbackContext context);
     }
 }
